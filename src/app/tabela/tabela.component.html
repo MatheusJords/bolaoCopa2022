@@ -1,0 +1,31 @@
+<div class="grupos" *ngFor="let grupo of grupos; index as i">
+    <h3>Grupo {{grupo}}</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Seleção</th>
+                <th scope="col">Pts</th>
+                <th scope="col">PJ</th>
+                <th scope="col">V</th>
+                <th scope="col">E</th>
+                <th scope="col">D</th>
+                <th scope="col">GP</th>
+                <th scope="col">GC</th>
+                <th scope="col">SG</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="retornaSelecoes(grupo)">
+            <tr *ngFor="let selecao of selecoesDoGrupo; index as i">
+                    <th>{{selecao.nome}}</th>
+                    <th>{{selecao.pontos}}</th>
+                    <th>{{selecao.partidas}}</th>
+                    <th>{{selecao.vitorias}}</th>
+                    <th>{{selecao.empates}}</th>
+                    <th>{{selecao.derrotas}}</th>
+                    <th>{{selecao.golspro}}</th>
+                    <th>{{selecao.golscontra}}</th>
+                    <th>{{selecao.saldogols}}</th>
+                </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,1 +1,18 @@
-<p></p>
+<aside>
+    <div *ngFor="let grupo of grupos; index as i">
+        <div *ngIf="retornaSelecoes(grupo)">
+            <h3>Grupo {{grupo}}</h3>
+            <hr>
+            <label *ngIf="selecoesDoGrupo[0]" class="col-4 text-center" for="">{{selecoesDoGrupo[0].nome}}</label>
+            <input class="col-1" type="text"> x
+            <input class="col-1" type="text">
+            <label *ngIf="selecoesDoGrupo[1]" class="col-4 text-center" for="">{{selecoesDoGrupo[1].nome}}</label>   
+            <br>
+            <label *ngIf="selecoesDoGrupo[2]" class="col-4 text-center" for="">{{selecoesDoGrupo[2].nome}}</label>
+            <input class="col-1" type="text"> x
+            <input class="col-1" type="text">
+            <label *ngIf="selecoesDoGrupo[3]" class="col-4 text-center" for="">{{selecoesDoGrupo[3].nome}}</label>  
+            <hr>
+        </div>
+    </div>
+</aside>

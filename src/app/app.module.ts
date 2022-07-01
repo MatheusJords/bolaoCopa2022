@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabelaComponent } from './tabela/tabela.component';
 import { RodadaComponent } from './rodada/rodada.component';
+import { SelecoesService } from './copadomundo/selecoes.service';
+import { GruposService } from './copadomundo/grupos.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { RodadaComponent } from './rodada/rodada.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SelecoesService,GruposService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

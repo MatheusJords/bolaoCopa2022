@@ -9,4 +9,5 @@ export class Selecoes {
     golspro: number = 0;
     golscontra: number = 0;
     saldogols: number = 0;
+    posicao: number = 0;
 }

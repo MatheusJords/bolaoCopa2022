@@ -1,0 +1,7 @@
+.btn-primary{
+    color:grey;
+    background-color: rgba(240, 248, 255, 0.815);
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 5px;
+}

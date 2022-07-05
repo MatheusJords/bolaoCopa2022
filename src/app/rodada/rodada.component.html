@@ -1,18 +1,78 @@
 <aside>
-    <div *ngFor="let grupo of grupos; index as i">
-        <div *ngIf="retornaSelecoes(grupo)">
-            <h3>Grupo {{grupo}}</h3>
-            <hr>
-            <label *ngIf="selecoesDoGrupo[0]" class="col-4 text-center" for="">{{selecoesDoGrupo[0].nome}}</label>
-            <input class="col-1" type="text"> x
-            <input class="col-1" type="text">
-            <label *ngIf="selecoesDoGrupo[1]" class="col-4 text-center" for="">{{selecoesDoGrupo[1].nome}}</label>   
-            <br>
-            <label *ngIf="selecoesDoGrupo[2]" class="col-4 text-center" for="">{{selecoesDoGrupo[2].nome}}</label>
-            <input class="col-1" type="text"> x
-            <input class="col-1" type="text">
-            <label *ngIf="selecoesDoGrupo[3]" class="col-4 text-center" for="">{{selecoesDoGrupo[3].nome}}</label>  
-            <hr>
+    <h6>{{mostraRodada()}}</h6>
+    <button [hidden]="rodada1" (click)="visualizarRodadaAnterior()" type="input" class="btn-primary"> Rodada
+        Anterior</button>
+    <button [hidden]="rodada3" (click)="visualizarProximaRodada()" type="input" class="btn-primary"> Próxima
+        Rodada</button>
+    <hr>
+
+    <div *ngIf="rodada1">
+        <div *ngFor="let grupo of grupos; index as i">
+            <div *ngIf="retornaSelecoes(grupo)">
+                <h3>Grupo {{grupo}}</h3>
+                <hr>
+                <label *ngIf="selecoesDoGrupo[0]" class="col-4 text-center" for="">{{selecoesDoGrupo[0].nome}}</label>
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[0].g1"
+                    (change)="atualizaPlacar(selecoesDoGrupo[0].g1, selecoesDoGrupo[1].g1,selecoesDoGrupo[0],selecoesDoGrupo[1])" type="text"> x
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[1].g1"
+                    (change)="atualizaPlacar(selecoesDoGrupo[0].g1, selecoesDoGrupo[1].g1)" type="text">
+                <label *ngIf="selecoesDoGrupo[1]" class="col-4 text-center" for="">{{selecoesDoGrupo[1].nome}}</label>
+                <br>
+                <label *ngIf="selecoesDoGrupo[2]" class="col-4 text-center" for="">{{selecoesDoGrupo[2].nome}}</label>
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[2].g1"
+                    (change)="atualizaPlacar(selecoesDoGrupo[2].g1)" type="text"> x
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[3].g1"
+                    (change)="atualizaPlacar(selecoesDoGrupo[3].g1)" type="text">
+                <label *ngIf="selecoesDoGrupo[3]" class="col-4 text-center" for="">{{selecoesDoGrupo[3].nome}}</label>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="rodada2">
+        <div *ngFor="let grupo of grupos; index as i">
+            <div *ngIf="retornaSelecoes(grupo)">
+                <h3>Grupo {{grupo}}</h3>
+                <hr>
+                <label *ngIf="selecoesDoGrupo[0]" class="col-4 text-center" for="">{{selecoesDoGrupo[0].nome}}</label>
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[0].g1"
+                (change)="atualizaPlacar(selecoesDoGrupo[0].g1)" type="text"> x
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[2].g1"
+                (change)="atualizaPlacar(selecoesDoGrupo[2].g1)" type="text">
+                <label *ngIf="selecoesDoGrupo[2]" class="col-4 text-center" for="">{{selecoesDoGrupo[2].nome}}</label>
+                <br>
+                <label *ngIf="selecoesDoGrupo[1]" class="col-4 text-center" for="">{{selecoesDoGrupo[1].nome}}</label>
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[1].g1"
+                (change)="atualizaPlacar(selecoesDoGrupo[1].g1)" type="text"> x
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[3].g1"
+                (change)="atualizaPlacar(selecoesDoGrupo[3].g1)" type="text">
+                <label *ngIf="selecoesDoGrupo[3]" class="col-4 text-center" for="">{{selecoesDoGrupo[3].nome}}</label>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="rodada3">
+        <div *ngFor="let grupo of grupos; index as i">
+            <div *ngIf="retornaSelecoes(grupo)">
+                <h3>Grupo {{grupo}}</h3>
+                <hr>
+                <label *ngIf="selecoesDoGrupo[0]" class="col-4 text-center" for="">{{selecoesDoGrupo[0].nome}}</label>
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[0].g1"
+                (change)="atualizaPlacar(selecoesDoGrupo[0].g1)" type="text"> x
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[3].g1"
+                (change)="atualizaPlacar(selecoesDoGrupo[3].g1)" type="text">
+                <label *ngIf="selecoesDoGrupo[3]" class="col-4 text-center" for="">{{selecoesDoGrupo[3].nome}}</label>
+                <br>
+                <label *ngIf="selecoesDoGrupo[1]" class="col-4 text-center" for="">{{selecoesDoGrupo[1].nome}}</label>
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[1].g1"
+                (change)="atualizaPlacar(selecoesDoGrupo[1].g1)" type="text"> x
+                <input class="col-1" [(ngModel)]="selecoesDoGrupo[2].g1"
+                (change)="atualizaPlacar(selecoesDoGrupo[2].g1)" type="text">
+                <label *ngIf="selecoesDoGrupo[2]" class="col-4 text-center" for="">{{selecoesDoGrupo[2].nome}}</label>
+                <hr>
+            </div>
         </div>
     </div>
 </aside>

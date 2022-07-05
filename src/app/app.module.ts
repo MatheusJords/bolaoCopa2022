@@ -7,6 +7,8 @@ import { TabelaComponent } from './tabela/tabela.component';
 import { RodadaComponent } from './rodada/rodada.component';
 import { SelecoesService } from './copadomundo/selecoes.service';
 import { GruposService } from './copadomundo/grupos.service';
+import { RodadaService } from './copadomundo/rodada.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { GruposService } from './copadomundo/grupos.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [SelecoesService,GruposService],
+  providers: [SelecoesService,GruposService,RodadaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

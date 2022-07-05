@@ -10,4 +10,7 @@ export class Selecoes {
     golscontra: number = 0;
     saldogols: number = 0;
     posicao: number = 0;
+    g1: number = 0;
+    g2: number = 0;
+    g3: number = 0;
 }

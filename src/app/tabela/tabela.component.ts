@@ -11,24 +11,43 @@ import { GruposService } from '../copadomundo/grupos.service';
 export class TabelaComponent implements OnInit {
   grupos: Array<String> = [""];
   selecoes: Array<Selecoes> = [];
-  selecao : Selecoes = new Selecoes();
+  selecao: Selecoes = new Selecoes();
   selecoesDoGrupo: Array<Selecoes> = [];
-  
+  grupoA: Array<Selecoes> = [];
+  grupoB: Array<Selecoes> = [];
+  grupoC: Array<Selecoes> = [];
+  grupoD: Array<Selecoes> = [];
+  grupoE: Array<Selecoes> = [];
+  grupoF: Array<Selecoes> = [];
+  grupoG: Array<Selecoes> = [];
+  grupoH: Array<Selecoes> = [];
+
 
   constructor(
-    private gruposService : GruposService,
-    private selecoesService : SelecoesService) {
-      
-    }
+    private gruposService: GruposService,
+    private selecoesService: SelecoesService) {
+
+    this.grupoA = this.selecoesService.grupoA;
+    this.grupoB = this.selecoesService.grupoB;
+    this.grupoC = this.selecoesService.grupoC;
+    this.grupoD = this.selecoesService.grupoD;
+    this.grupoE = this.selecoesService.grupoE;
+    this.grupoF = this.selecoesService.grupoF;
+    this.grupoG = this.selecoesService.grupoG;
+    this.grupoH = this.selecoesService.grupoH;
+
+  }
 
   ngOnInit(): void {
     this.grupos = this.gruposService.criaGrupos();
     this.selecoesService.criaSelecoesDaCopa();
   }
 
-  retornaSelecoes(grupo:String){
+  /*
+  retornaSelecoes(grupo: String) {
     this.selecoesService.retornaSelecoes(grupo);
     this.selecoesDoGrupo = this.selecoesService.selecoesDoGrupo;
     return true
   }
+  */
 }

@@ -13,4 +13,5 @@ export class Selecoes {
     g1: number = 0;
     g2: number = 0;
     g3: number = 0;
+    pg: number = 0;
 }

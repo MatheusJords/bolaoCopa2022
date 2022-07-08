@@ -15,14 +15,29 @@ export class RodadaComponent implements OnInit {
   rodada1 : boolean = true;
   rodada2 : boolean = false;
   rodada3 : boolean = false;
+  grupoA: Array<Selecoes> = [];
+  grupoB: Array<Selecoes> = [];
+  grupoC: Array<Selecoes> = [];
+  grupoD: Array<Selecoes> = [];
+  grupoE: Array<Selecoes> = [];
+  grupoF: Array<Selecoes> = [];
+  grupoG: Array<Selecoes> = [];
+  grupoH: Array<Selecoes> = [];
 
   constructor(private gruposService : GruposService,
               private selecoesService : SelecoesService,
               private rodadaService : RodadaService) {
-
         this.rodada1 = this.rodadaService.rodada1;
         this.rodada2 = this.rodadaService.rodada2;
         this.rodada3 = this.rodadaService.rodada3;
+        this.grupoA = this.selecoesService.grupoA;
+        this.grupoB = this.selecoesService.grupoB;
+        this.grupoC = this.selecoesService.grupoC;
+        this.grupoD = this.selecoesService.grupoD;
+        this.grupoE = this.selecoesService.grupoE;
+        this.grupoF = this.selecoesService.grupoF;
+        this.grupoG = this.selecoesService.grupoG;
+        this.grupoH = this.selecoesService.grupoH;
   }
 
   ngOnInit(): void {
@@ -49,14 +64,25 @@ export class RodadaComponent implements OnInit {
     return true
   }
 
-  atualizaPlacar(golsCasa:number, golsFora ?: number, mandante ?: Selecoes,visitante ?: Selecoes){
-    console.log(golsCasa)
-    console.log(golsFora)
-    console.log(mandante)
-    console.log(visitante)
+  atualizaPlacar(golsCasa:any, golsFora ?: any,grupo?:any, posicaoMandante ?: any, posicaoVisitante?: any){
+
+    let selecaoMandante;
+    let selecaoVisitante
     
-    if(visitante !== undefined && mandante !== undefined && golsFora !== undefined && golsCasa !== undefined){
-      mandante.golspro = mandante.g1 + mandante.g2 + mandante.g3;
+    switch (grupo) {
+      case "A":
+        selecaoMandante = this.grupoA.filter((selecao) => selecao.posicao === posicaoMandante);
+        selecaoVisitante = this.grupoA.filter((selecao) => selecao.posicao === posicaoVisitante)
+
+        
+        break;
+    
+      default:
+        break;
+    }
+
+    if( golsFora !== undefined && golsCasa !== undefined){
+      
       if(golsCasa > golsFora){
         
       }

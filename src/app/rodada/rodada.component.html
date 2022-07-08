@@ -13,7 +13,7 @@
                 <hr>
                 <label *ngIf="selecoesDoGrupo[0]" class="col-4 text-center" for="">{{selecoesDoGrupo[0].nome}}</label>
                 <input class="col-1" [(ngModel)]="selecoesDoGrupo[0].g1"
-                    (change)="atualizaPlacar(selecoesDoGrupo[0].g1, selecoesDoGrupo[1].g1,selecoesDoGrupo[0],selecoesDoGrupo[1])" type="text"> x
+                    (change)="atualizaPlacar(selecoesDoGrupo[0].g1, selecoesDoGrupo[1].g1,grupo,selecoesDoGrupo[0].posicao,selecoesDoGrupo[1])" type="text"> x
                 <input class="col-1" [(ngModel)]="selecoesDoGrupo[1].g1"
                     (change)="atualizaPlacar(selecoesDoGrupo[0].g1, selecoesDoGrupo[1].g1)" type="text">
                 <label *ngIf="selecoesDoGrupo[1]" class="col-4 text-center" for="">{{selecoesDoGrupo[1].nome}}</label>

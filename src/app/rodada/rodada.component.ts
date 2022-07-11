@@ -64,43 +64,7 @@ export class RodadaComponent implements OnInit {
     return true
   }
 
-  atualizaPlacar(golsCasa:any, golsFora ?: any,grupo?:any, posicaoMandante ?: any, posicaoVisitante?: any){
-
-    let selecaoMandante;
-    let selecaoVisitante
-    
-    switch (grupo) {
-      case "A":
-        selecaoMandante = this.grupoA.filter((selecao) => selecao.posicao === posicaoMandante);
-        selecaoVisitante = this.grupoA.filter((selecao) => selecao.posicao === posicaoVisitante)
-
-        
-        break;
-    
-      default:
-        break;
-    }
-
-    if( golsFora !== undefined && golsCasa !== undefined){
-      
-      if(golsCasa > golsFora){
-        
-      }
-
-      if(golsFora > golsCasa){
-
-      }
-
-      if(golsCasa === golsFora){
-
-      }
-
-      
-      
-    }
-    
-  }
-
+  
   atualizaRodada(){
     this.rodada1 = this.rodadaService.rodada1;
     this.rodada2 = this.rodadaService.rodada2;

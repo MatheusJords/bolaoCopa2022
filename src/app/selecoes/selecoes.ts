@@ -13,5 +13,8 @@ export class Selecoes {
     g1: number = 0;
     g2: number = 0;
     g3: number = 0;
+    j1: boolean = false;
+    j2: boolean = false;
+    j3: boolean = false;
     pg: number = 0;
 }

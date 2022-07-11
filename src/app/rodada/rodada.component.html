@@ -5,7 +5,18 @@
     <button [hidden]="rodada3" (click)="visualizarProximaRodada()" type="input" class="btn-primary"> Próxima
         Rodada</button>
     <hr>
-
+    <div *ngIf="rodada1">
+        <app-rodada1></app-rodada1>
+    </div>
+    <div *ngIf="rodada2">
+        <app-rodada2></app-rodada2>
+    </div>
+    <div *ngIf="rodada3">
+        <app-rodada3></app-rodada3>
+    </div>
+    
+    
+    <!-- 
     <div *ngIf="rodada1">
         <div *ngFor="let grupo of grupos; index as i">
             <div *ngIf="retornaSelecoes(grupo)">
@@ -75,4 +86,5 @@
             </div>
         </div>
     </div>
+    -->
 </aside>

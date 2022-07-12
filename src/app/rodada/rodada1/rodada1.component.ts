@@ -42,26 +42,16 @@ export class Rodada1Component implements OnInit {
   }
 
   mudaResultado(mandante:Selecoes,visitante:Selecoes, rodada: number){
-    if(rodada === 1){
-      if(!mandante.j1){
+    if(this.rodadaService.ehRodada1(rodada)){
         if(mandante.g1 > visitante.g1){
-          mandante.j1 = true;
-          visitante.j1 = true;
-          mandante.golspro = Number(mandante.g2) + Number(mandante.g1) + Number(mandante.g3);
-          mandante.pontos = mandante.pontos + 3;
-          mandante.golscontra = visitante.g1;
-          mandante.partidas = mandante.partidas + 1;
-          mandante.saldogols = Number(mandante.golspro) - Number(mandante.golscontra)
+          this.rodadaService.vitoriaMandanteR1(mandante,visitante);
         }
-      }
-
-      if(mandante.j1){
-        if(mandante.g1 > visitante.g1){
-          mandante.golspro = Number(mandante.g2) + Number(mandante.g1) + Number(mandante.g3);
-          mandante.golscontra = visitante.g1;
-          mandante.saldogols = Number(mandante.golspro) - Number(mandante.golscontra)
+        if(mandante.g1 < visitante.g1){
+          this.rodadaService.vitoriaVisitanteR1(mandante,visitante);
         }
-      }
+        if(mandante.g1 === visitante.g1){
+          this.rodadaService.EmpateR1(mandante,visitante);
+        }
     }
     
   }

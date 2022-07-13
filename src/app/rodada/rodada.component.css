@@ -5,3 +5,10 @@
     border-radius: 10px;
     padding: 5px;
 }
+
+.rodada-nome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0;
+}

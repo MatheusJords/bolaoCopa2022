@@ -32,4 +32,5 @@ export class Selecoes {
     derrota1:number = 0;
     derrota2:number = 0;
     derrota3:number = 0;
+    flag: string = "";
 }

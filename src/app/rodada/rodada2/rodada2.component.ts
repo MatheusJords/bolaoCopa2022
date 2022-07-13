@@ -41,4 +41,19 @@ export class Rodada2Component implements OnInit {
   ngOnInit(): void {
   }
 
+  mudaResultado(mandante:Selecoes,visitante:Selecoes, rodada: number){
+    if(this.rodadaService.ehRodada1(rodada)){
+        if(mandante.g1 > visitante.g1){
+          this.rodadaService.vitoriaMandanteR1(mandante,visitante);
+        }
+        if(mandante.g1 < visitante.g1){
+          this.rodadaService.vitoriaVisitanteR1(mandante,visitante);
+        }
+        if(mandante.g1 === visitante.g1){
+          this.rodadaService.EmpateR1(mandante,visitante);
+        }
+    }
+    
+  }
+
 }

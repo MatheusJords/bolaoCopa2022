@@ -1,5 +1,6 @@
 <div class="grupos">
     <h3>Grupo A</h3>
+    <span class="flag-icon flag-icon-br"></span>
     <table class="table">
         <thead>
             <tr>
@@ -48,7 +49,7 @@
         </thead>
         <tbody *ngIf="grupoB">
             <tr *ngFor="let selecao of grupoB; index as i">
-                    <th>{{selecao.nome}}</th>
+                <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
                     <th>{{selecao.partidas}}</th>
                     <th>{{selecao.vitorias}}</th>
@@ -252,4 +253,5 @@
                 </tr>
         </tbody>
     </table>
+    
 </div>

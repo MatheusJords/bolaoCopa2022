@@ -137,4 +137,12 @@ export class SelecoesService {
     return false;
   }
 
+  atualizaVitorias(grupo:Array<Selecoes>,selecao:string){
+    grupo.forEach((selecaoFiltrada) => {
+      if(selecaoFiltrada.nome === selecao){
+        selecaoFiltrada.partidas = selecaoFiltrada.partida1 + selecaoFiltrada.partida2 + selecaoFiltrada.partida3
+      }
+    })
+  }
+
 }

@@ -2,6 +2,7 @@ import { SelecoesService } from './../copadomundo/selecoes.service';
 import { Selecoes } from './../selecoes/selecoes';
 import { Component, OnInit } from '@angular/core';
 import { GruposService } from '../copadomundo/grupos.service';
+import { RodadaService } from '../copadomundo/rodada.service';
 
 @Component({
   selector: 'app-tabela',
@@ -24,6 +25,7 @@ export class TabelaComponent implements OnInit {
 
 
   constructor(
+    private rodadaService: RodadaService,
     private gruposService: GruposService,
     private selecoesService: SelecoesService) {
 

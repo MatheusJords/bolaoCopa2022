@@ -42,6 +42,9 @@ export class Rodada3Component implements OnInit {
   }
 
   mudaResultadoR3(mandante: Selecoes, visitante: Selecoes, rodada: number) {
+    mandante.g3 = Number(mandante.g3);
+    visitante.g3 = Number(visitante.g3);
+
     if (mandante.g3 > visitante.g3) {
       this.rodadaService.vitoriaMandanteR3(mandante, visitante);
     }

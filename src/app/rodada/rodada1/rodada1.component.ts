@@ -43,6 +43,7 @@ export class Rodada1Component implements OnInit {
 
   mudaResultado(mandante:Selecoes,visitante:Selecoes, rodada: number){
     if(this.rodadaService.ehRodada1(rodada)){
+
         if(mandante.g1 > visitante.g1){
           this.rodadaService.vitoriaMandanteR1(mandante,visitante);
         }

@@ -197,7 +197,7 @@ export class SelecoesService {
 
     grupo.forEach((selecaoGrupo) => {
       if(selecaoGrupo.nome === selecao){
-        selecaoGrupo.golspro = selecaoGrupo.g1 + selecaoGrupo.g2 + selecaoGrupo.g3
+        selecaoGrupo.golspro = Number(selecaoGrupo.g1) + Number(selecaoGrupo.g2) + Number(selecaoGrupo.g3)
 
         selecaoSelecionada = selecaoGrupo
       }
@@ -211,7 +211,7 @@ export class SelecoesService {
 
     grupo.forEach((selecaoGrupo) => {
       if(selecaoGrupo.nome === selecao){
-        selecaoGrupo.golscontra = selecaoGrupo.gs1 + selecaoGrupo.gs2 + selecaoGrupo.gs3
+        selecaoGrupo.golscontra = Number(selecaoGrupo.gs1) + Number(selecaoGrupo.gs2) + Number(selecaoGrupo.gs3)
 
         selecaoSelecionada = selecaoGrupo
       }
@@ -225,7 +225,7 @@ export class SelecoesService {
 
     grupo.forEach((selecaoGrupo) => {
       if(selecaoGrupo.nome === selecao){
-        selecaoGrupo.saldogols = selecaoGrupo.golspro - selecaoGrupo.golscontra
+        selecaoGrupo.saldogols = Number(selecaoGrupo.golspro) - Number(selecaoGrupo.golscontra)
 
         selecaoSelecionada = selecaoGrupo
       }

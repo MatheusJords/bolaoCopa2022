@@ -7,8 +7,15 @@
 }
 
 .rodada-nome{
+    height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-content: center;
     padding: 20px 0;
+}
+
+.rodada-grupos{
+    display: flex;
+    flex-direction: column;
 }

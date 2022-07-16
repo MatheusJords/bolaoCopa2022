@@ -49,6 +49,30 @@ export class TabelaComponent implements OnInit {
     return this.selecoesService.atualizaPartidas(grupo,selecao.nome);
   }
 
+  atualizaVitorias(selecao:Selecoes,grupo: Array<Selecoes>){
+    return this.selecoesService.atualizaVitorias(grupo,selecao.nome);
+  }
+
+  atualizaEmpate(selecao:Selecoes,grupo: Array<Selecoes>){
+    return this.selecoesService.atualizaEmpate(grupo,selecao.nome);
+  }
+
+  atualizaDerrota(selecao:Selecoes,grupo: Array<Selecoes>){
+    return this.selecoesService.atualizaDerrota(grupo,selecao.nome);
+  }
+
+  atualizaGolsPro(selecao:Selecoes,grupo: Array<Selecoes>){
+    return this.selecoesService.atualizaGolsPro(grupo,selecao.nome);
+  }
+
+  atualizaGolsContra(selecao:Selecoes,grupo: Array<Selecoes>){
+    return this.selecoesService.atualizaGolsContra(grupo,selecao.nome);
+  }
+
+  atualizaSaldoGols(selecao:Selecoes,grupo: Array<Selecoes>){
+    return this.selecoesService.atualizaSaldoGols(grupo,selecao.nome);
+  }
+
   /*
   retornaSelecoes(grupo: String) {
     this.selecoesService.retornaSelecoes(grupo);

@@ -47,7 +47,6 @@ export class RodadaService {
     mandante.g3;
     mandante.pontosrodada3 = 3;
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
-    mandante.partidas = mandante.partida1 + mandante.partida2 + 1;
     mandante.vitorias = mandante.vitoria1 + mandante.vitoria2 + 1;
     mandante.empates = mandante.empate1 + mandante.empate2 + 0;
     mandante.derrotas = mandante.derrota1 + mandante.derrota2 + 0;
@@ -60,10 +59,12 @@ export class RodadaService {
     visitante.golscontra = visitante.gs1 + visitante.gs2 + mandante.g3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = visitante.partida1 + visitante.partida2 + 1;
     visitante.vitorias = visitante.vitoria1 + visitante.vitoria2 + 0;
     visitante.empates = visitante.empate1 + visitante.empate2 + 0;
     visitante.derrotas = visitante.derrota1 + visitante.derrota2 + 1;
+
+    mandante.partida3 = 1;
+    visitante.partida3 = 1;
   }
 
   vitoriaVisitanteR3(mandante:Selecoes,visitante:Selecoes){
@@ -73,7 +74,6 @@ export class RodadaService {
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
     mandante.golscontra = mandante.gs1 + mandante.gs2 + visitante.g3;
     mandante.saldogols = mandante.golspro - mandante.golscontra;
-    mandante.partidas = mandante.partida1 + mandante.partida2 + 1;
     mandante.vitorias = mandante.vitoria1 + mandante.vitoria2 + 0;
     mandante.empates = mandante.empate1 + mandante.empate2 + 0;
     mandante.derrotas = mandante.derrota1 + mandante.derrota2 + 1;
@@ -84,10 +84,12 @@ export class RodadaService {
     visitante.golscontra = visitante.gs1 + visitante.gs2 + mandante.g3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = visitante.partida1 + visitante.partida2 + 1;
     visitante.vitorias = visitante.vitoria1 + visitante.vitoria2 + 1;
     visitante.empates = visitante.empate1 + visitante.empate2 + 0;
     visitante.derrotas = visitante.derrota1 + visitante.derrota2 + 0;
+
+    mandante.partida3 = 1;
+    visitante.partida3 = 1;
   }
 
   EmpateR3(mandante:Selecoes,visitante:Selecoes){
@@ -97,7 +99,6 @@ export class RodadaService {
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
     mandante.golscontra = mandante.gs1 + mandante.gs2 + visitante.g3;
     mandante.saldogols = mandante.golspro - mandante.golscontra
-    mandante.partidas = mandante.partida1 + mandante.partida2 + 1;
     mandante.vitorias = mandante.vitoria1 + mandante.vitoria2 + 0;
     mandante.empates = mandante.empate1 + mandante.empate2 + 1;
     mandante.derrotas = mandante.derrota1 + mandante.derrota2 + 0;
@@ -108,10 +109,12 @@ export class RodadaService {
     visitante.golscontra = visitante.gs1 + visitante.gs2 + mandante.g3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = visitante.partida1 + visitante.partida2 + 1;
     visitante.vitorias = visitante.vitoria1 + visitante.vitoria2 + 0;
     visitante.empates = visitante.empate1 + visitante.empate2 + 1;
     visitante.derrotas = visitante.derrota1 + visitante.derrota2 + 0;
+
+    mandante.partida3 = 1;
+    visitante.partida3 = 1;
   }
 
   vitoriaMandanteR2(mandante:Selecoes,visitante:Selecoes){
@@ -119,7 +122,6 @@ export class RodadaService {
     mandante.g3;
     mandante.pontosrodada2 = 3;
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
-    mandante.partidas = mandante.partida1 + 1 + mandante.partida3;
     mandante.vitorias = mandante.vitoria1 + 1 + mandante.vitoria3;
     mandante.empates = mandante.empate1 + 0 + mandante.empate3;
     mandante.derrotas = mandante.derrota1 + 0 + mandante.derrota3;
@@ -132,10 +134,12 @@ export class RodadaService {
     visitante.golscontra = visitante.gs1 + mandante.g2 + visitante.gs3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = visitante.partida1 + 1 + visitante.partida3;
     visitante.vitorias = visitante.vitoria1 + 0 + visitante.vitoria3;
     visitante.empates = visitante.empate1 + 0 + visitante.empate3;
     visitante.derrotas = visitante.derrota1 + 1 + visitante.derrota3;
+
+    mandante.partida2 = 1;
+    visitante.partida2 = 1;
   }
 
   vitoriaVisitanteR2(mandante:Selecoes,visitante:Selecoes){
@@ -145,7 +149,6 @@ export class RodadaService {
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
     mandante.golscontra = mandante.gs1 + visitante.g2 + mandante.gs3;
     mandante.saldogols = mandante.golspro - mandante.golscontra;
-    mandante.partidas = mandante.partida1 + 1 + mandante.partida3;
     mandante.vitorias = mandante.vitoria1 + 0 + mandante.vitoria3;
     mandante.empates = mandante.empate1 + 0 + mandante.empate3;
     mandante.derrotas = mandante.derrota1 + 1 + mandante.derrota3;
@@ -156,10 +159,12 @@ export class RodadaService {
     visitante.golscontra = visitante.gs1 + mandante.g2 + visitante.gs3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = visitante.partida1 + 1 + visitante.partida3;
     visitante.vitorias = visitante.vitoria1 + 1 + visitante.vitoria3;
     visitante.empates = visitante.empate1 + 0 + visitante.empate3;
     visitante.derrotas = visitante.derrota1 + 0 + visitante.derrota3;
+
+    mandante.partida2 = 1;
+    visitante.partida2 = 1;
   }
 
   EmpateR2(mandante:Selecoes,visitante:Selecoes){
@@ -169,7 +174,6 @@ export class RodadaService {
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
     mandante.golscontra = mandante.gs1 + visitante.g2 + mandante.gs3;
     mandante.saldogols = mandante.golspro - mandante.golscontra
-    mandante.partidas = mandante.partida1 + 1 + mandante.partida3;
     mandante.vitorias = mandante.vitoria1 + 0 + mandante.vitoria3;
     mandante.empates = mandante.empate1 + 1 + mandante.empate3;
     mandante.derrotas = mandante.derrota1 + 0 + mandante.derrota3;
@@ -180,10 +184,12 @@ export class RodadaService {
     visitante.golscontra = visitante.gs1 + mandante.g2 + visitante.gs3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = visitante.partida1 + 1 + visitante.partida3;
     visitante.vitorias = visitante.vitoria1 + 0 + visitante.vitoria3;
     visitante.empates = visitante.empate1 + 1 + visitante.empate3;
     visitante.derrotas = visitante.derrota1 + 0 + visitante.derrota3;
+
+    mandante.partida2 = 1;
+    visitante.partida2 = 1;
   }
 
   vitoriaMandanteR1(mandante:Selecoes,visitante:Selecoes){
@@ -191,7 +197,6 @@ export class RodadaService {
     mandante.g3;
     mandante.pontosrodada1 = 3;
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
-    mandante.partidas = 1 + mandante.partida2 + mandante.partida3;
     mandante.vitorias = 1 + mandante.vitoria2 + mandante.vitoria3;
     mandante.empates = 0 + mandante.empate2 + mandante.empate3;
     mandante.derrotas = 0 + mandante.derrota2 + mandante.derrota3;
@@ -204,10 +209,12 @@ export class RodadaService {
     visitante.golscontra = mandante.g1 + visitante.gs2 + visitante.gs3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = 1 + visitante.partida2 + visitante.partida3;
     visitante.vitorias = 0 + visitante.vitoria2 + visitante.vitoria3;
     visitante.empates = 0 + visitante.empate2 + visitante.empate3;
     visitante.derrotas = 1 + visitante.derrota2 + visitante.derrota3;
+
+    mandante.partida1 = 1;
+    visitante.partida1 = 1;
   }
 
   vitoriaVisitanteR1(mandante:Selecoes,visitante:Selecoes){
@@ -217,7 +224,6 @@ export class RodadaService {
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
     mandante.golscontra = visitante.g1 + mandante.gs2 + mandante.gs3;
     mandante.saldogols = mandante.golspro - mandante.golscontra;
-    mandante.partidas = 1 + mandante.partida2 + mandante.partida3;
     mandante.vitorias = 0 + mandante.vitoria2 + mandante.vitoria3;
     mandante.empates = 0 + mandante.empate2 + mandante.empate3;
     mandante.derrotas = 1 + mandante.derrota2 + mandante.derrota3;
@@ -228,10 +234,12 @@ export class RodadaService {
     visitante.golscontra = mandante.g1 + visitante.gs2 + visitante.gs3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = 1 + visitante.partida2 + visitante.partida3;
     visitante.vitorias = 1 + visitante.vitoria2 + visitante.vitoria3;
     visitante.empates = 0 + visitante.empate2 + visitante.empate3;
     visitante.derrotas = 0 + visitante.derrota2 + visitante.derrota3;
+
+    mandante.partida1 = 1;
+    visitante.partida1 = 1;
   }
 
   EmpateR1(mandante:Selecoes,visitante:Selecoes){
@@ -241,7 +249,6 @@ export class RodadaService {
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
     mandante.golscontra = visitante.g1 + mandante.gs2 + mandante.gs3;
     mandante.saldogols = mandante.golspro - mandante.golscontra
-    mandante.partidas = 1 + mandante.partida2 + mandante.partida3;
     mandante.vitorias = 0 + mandante.vitoria2 + mandante.vitoria3;
     mandante.empates = 1 + mandante.empate2 + mandante.empate3;
     mandante.derrotas = 0 + mandante.derrota2 + mandante.derrota3;
@@ -252,10 +259,12 @@ export class RodadaService {
     visitante.golscontra = mandante.g1 + visitante.gs2 + visitante.gs3;
     visitante.saldogols = visitante.golspro - visitante.golscontra
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    visitante.partidas = 1 + visitante.partida2 + visitante.partida3;
     visitante.vitorias = 0 + visitante.vitoria2 + visitante.vitoria3;
     visitante.empates = 1 + visitante.empate2 + visitante.empate3;
     visitante.derrotas = 0 + visitante.derrota2 + visitante.derrota3;
+
+    mandante.partida1 = 1;
+    visitante.partida1 = 1;
   }
 
   visualizarRodadaAnterior(){

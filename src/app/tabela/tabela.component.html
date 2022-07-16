@@ -19,7 +19,7 @@
             <tr *ngFor="let selecao of grupoA; index as i">
                     <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
-                    <th>{{selecao.partidas}}</th>
+                    <th>{{atualizaPartidas(selecao,grupoA)}}</th>
                     <th>{{selecao.vitorias}}</th>
                     <th>{{selecao.empates}}</th>
                     <th>{{selecao.derrotas}}</th>
@@ -51,7 +51,7 @@
             <tr *ngFor="let selecao of grupoB; index as i">
                 <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
-                    <th>{{selecao.partidas}}</th>
+                    <th>{{atualizaPartidas(selecao,grupoB)}}</th>
                     <th>{{selecao.vitorias}}</th>
                     <th>{{selecao.empates}}</th>
                     <th>{{selecao.derrotas}}</th>
@@ -83,7 +83,7 @@
             <tr *ngFor="let selecao of grupoC; index as i">
                     <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
-                    <th>{{selecao.partidas}}</th>
+                    <th>{{atualizaPartidas(selecao,grupoC)}}</th>
                     <th>{{selecao.vitorias}}</th>
                     <th>{{selecao.empates}}</th>
                     <th>{{selecao.derrotas}}</th>
@@ -115,7 +115,7 @@
             <tr *ngFor="let selecao of grupoD; index as i">
                     <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
-                    <th>{{selecao.partidas}}</th>
+                    <th>{{atualizaPartidas(selecao,grupoD)}}</th>
                     <th>{{selecao.vitorias}}</th>
                     <th>{{selecao.empates}}</th>
                     <th>{{selecao.derrotas}}</th>
@@ -147,7 +147,7 @@
             <tr *ngFor="let selecao of grupoE; index as i">
                     <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
-                    <th>{{selecao.partidas}}</th>
+                    <th>{{atualizaPartidas(selecao,grupoE)}}</th>
                     <th>{{selecao.vitorias}}</th>
                     <th>{{selecao.empates}}</th>
                     <th>{{selecao.derrotas}}</th>
@@ -179,7 +179,7 @@
             <tr *ngFor="let selecao of grupoF; index as i">
                     <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
-                    <th>{{selecao.partidas}}</th>
+                    <th>{{atualizaPartidas(selecao,grupoF)}}</th>
                     <th>{{selecao.vitorias}}</th>
                     <th>{{selecao.empates}}</th>
                     <th>{{selecao.derrotas}}</th>
@@ -211,7 +211,7 @@
             <tr *ngFor="let selecao of grupoG; index as i">
                     <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
-                    <th>{{selecao.partidas}}</th>
+                    <th>{{atualizaPartidas(selecao,grupoG)}}</th>
                     <th>{{selecao.vitorias}}</th>
                     <th>{{selecao.empates}}</th>
                     <th>{{selecao.derrotas}}</th>
@@ -243,7 +243,7 @@
             <tr *ngFor="let selecao of grupoH; index as i">
                     <th>{{selecao.nome}}</th>
                     <th>{{selecao.pontos}}</th>
-                    <th>{{selecao.partidas}}</th>
+                    <th>{{atualizaPartidas(selecao,grupoH)}}</th>
                     <th>{{selecao.vitorias}}</th>
                     <th>{{selecao.empates}}</th>
                     <th>{{selecao.derrotas}}</th>

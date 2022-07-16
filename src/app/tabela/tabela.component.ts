@@ -45,6 +45,10 @@ export class TabelaComponent implements OnInit {
     this.selecoesService.criaSelecoesDaCopa();
   }
 
+  atualizaPartidas(selecao:Selecoes,grupo: Array<Selecoes>){
+    return this.selecoesService.atualizaPartidas(grupo,selecao.nome);
+  }
+
   /*
   retornaSelecoes(grupo: String) {
     this.selecoesService.retornaSelecoes(grupo);

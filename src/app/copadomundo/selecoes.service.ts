@@ -137,12 +137,52 @@ export class SelecoesService {
     return false;
   }
 
-  atualizaResultados(grupo:Array<Selecoes>,selecao:string){
+  atualizaPartidas(grupo:Array<Selecoes>,selecao:string){
+    let selecaoSelecionada:Selecoes = new Selecoes();
+    grupo.forEach((selecaoGrupo) => {
+      if(selecaoGrupo.nome === selecao){
+        selecaoGrupo.partidas = selecaoGrupo.partida1 + selecaoGrupo.partida2 + selecaoGrupo.partida3
+
+        selecaoSelecionada = selecaoGrupo
+      }
+    })
+
+    return selecaoSelecionada.partidas
+  }
+
+  atualizaVitorias(grupo:Array<Selecoes>,selecao:string){
+    
+    grupo.forEach((selecaoGrupo) => {
+      if(selecaoGrupo.nome === selecao){
+        selecaoGrupo.vitorias = selecaoGrupo.vitoria1 + selecaoGrupo.vitoria2 + selecaoGrupo.vitoria3
+      }
+    })
+  }
+
+  atualizaEmpate(grupo:Array<Selecoes>,selecao:string){
+    grupo.forEach((selecaoGrupo) => {
+      if(selecaoGrupo.nome === selecao)
+        selecaoGrupo.partidas = selecaoGrupo.partida1 + selecaoGrupo.partida2 + selecaoGrupo.partida3
+    })
+  }
+
+  atualizaDerrota(grupo:Array<Selecoes>,selecao:string){
+    grupo.forEach((selecaoGrupo) => {
+      if(selecaoGrupo.nome === selecao)
+        selecaoGrupo.partidas = selecaoGrupo.partida1 + selecaoGrupo.partida2 + selecaoGrupo.partida3
+    })
+  }
+
+  
+
+
+
+  /*atualizaResultados(grupo:Array<Selecoes>,selecao:string){
     grupo.forEach((selecaoFiltrada) => {
       if(selecaoFiltrada.nome === selecao){
         selecaoFiltrada.partidas = selecaoFiltrada.partida1 + selecaoFiltrada.partida2 + selecaoFiltrada.partida3
       }
     })
-  }
+  } */
 
 }

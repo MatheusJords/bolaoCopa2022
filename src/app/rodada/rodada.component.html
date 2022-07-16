@@ -8,16 +8,18 @@
             </button>
     </div>
     
-    <hr>
-    <div *ngIf="rodada1">
-        <app-rodada1></app-rodada1>
+    <div class="rodada-grupos">
+        <div *ngIf="rodada1">
+            <app-rodada1></app-rodada1>
+        </div>
+        <div *ngIf="rodada2">
+            <app-rodada2></app-rodada2>
+        </div>
+        <div *ngIf="rodada3">
+            <app-rodada3></app-rodada3>
+        </div>
     </div>
-    <div *ngIf="rodada2">
-        <app-rodada2></app-rodada2>
-    </div>
-    <div *ngIf="rodada3">
-        <app-rodada3></app-rodada3>
-    </div>
+    
     
     
     <!-- 

@@ -4,3 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+input{
+    text-align: center;
+}
+
+.grupos-rodadas{
+    height: 200px;
+    border: 1px solid black;
+}

@@ -151,38 +151,89 @@ export class SelecoesService {
   }
 
   atualizaVitorias(grupo:Array<Selecoes>,selecao:string){
-    
+    let selecaoSelecionada:Selecoes = new Selecoes();
+
     grupo.forEach((selecaoGrupo) => {
       if(selecaoGrupo.nome === selecao){
         selecaoGrupo.vitorias = selecaoGrupo.vitoria1 + selecaoGrupo.vitoria2 + selecaoGrupo.vitoria3
+
+        selecaoSelecionada = selecaoGrupo
       }
     })
+
+    return selecaoSelecionada.vitorias
   }
 
   atualizaEmpate(grupo:Array<Selecoes>,selecao:string){
+    let selecaoSelecionada:Selecoes = new Selecoes();
+
     grupo.forEach((selecaoGrupo) => {
-      if(selecaoGrupo.nome === selecao)
-        selecaoGrupo.partidas = selecaoGrupo.partida1 + selecaoGrupo.partida2 + selecaoGrupo.partida3
+      if(selecaoGrupo.nome === selecao){
+        selecaoGrupo.empates = selecaoGrupo.empate1 + selecaoGrupo.empate2 + selecaoGrupo.empate3
+
+        selecaoSelecionada = selecaoGrupo
+      }
     })
+
+    return selecaoSelecionada.empates
   }
 
   atualizaDerrota(grupo:Array<Selecoes>,selecao:string){
+    let selecaoSelecionada:Selecoes = new Selecoes();
+
     grupo.forEach((selecaoGrupo) => {
-      if(selecaoGrupo.nome === selecao)
-        selecaoGrupo.partidas = selecaoGrupo.partida1 + selecaoGrupo.partida2 + selecaoGrupo.partida3
+      if(selecaoGrupo.nome === selecao){
+        selecaoGrupo.derrotas = selecaoGrupo.derrota1 + selecaoGrupo.derrota2 + selecaoGrupo.derrota3
+
+        selecaoSelecionada = selecaoGrupo
+      }
     })
+
+    return selecaoSelecionada.derrotas
+  }
+
+  atualizaGolsPro(grupo:Array<Selecoes>,selecao:string){
+    let selecaoSelecionada:Selecoes = new Selecoes();
+
+    grupo.forEach((selecaoGrupo) => {
+      if(selecaoGrupo.nome === selecao){
+        selecaoGrupo.golspro = Number(selecaoGrupo.g1) + Number(selecaoGrupo.g2) + Number(selecaoGrupo.g3)
+
+        selecaoSelecionada = selecaoGrupo
+      }
+    })
+
+    return selecaoSelecionada.golspro
+  }
+
+  atualizaGolsContra(grupo:Array<Selecoes>,selecao:string){
+    let selecaoSelecionada:Selecoes = new Selecoes();
+
+    grupo.forEach((selecaoGrupo) => {
+      if(selecaoGrupo.nome === selecao){
+        selecaoGrupo.golscontra = Number(selecaoGrupo.gs1) + Number(selecaoGrupo.gs2) + Number(selecaoGrupo.gs3)
+
+        selecaoSelecionada = selecaoGrupo
+      }
+    })
+
+    return selecaoSelecionada.golscontra
+  }
+
+  atualizaSaldoGols(grupo:Array<Selecoes>,selecao:string){
+    let selecaoSelecionada:Selecoes = new Selecoes();
+
+    grupo.forEach((selecaoGrupo) => {
+      if(selecaoGrupo.nome === selecao){
+        selecaoGrupo.saldogols = Number(selecaoGrupo.golspro) - Number(selecaoGrupo.golscontra)
+
+        selecaoSelecionada = selecaoGrupo
+      }
+    })
+
+    return selecaoSelecionada.saldogols
   }
 
   
-
-
-
-  /*atualizaResultados(grupo:Array<Selecoes>,selecao:string){
-    grupo.forEach((selecaoFiltrada) => {
-      if(selecaoFiltrada.nome === selecao){
-        selecaoFiltrada.partidas = selecaoFiltrada.partida1 + selecaoFiltrada.partida2 + selecaoFiltrada.partida3
-      }
-    })
-  } */
 
 }

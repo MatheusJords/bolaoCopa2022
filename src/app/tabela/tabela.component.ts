@@ -73,6 +73,10 @@ export class TabelaComponent implements OnInit {
     return this.selecoesService.atualizaSaldoGols(grupo,selecao.nome);
   }
 
+  ordenaValores(grupo:String){
+    this.selecoesService.ordenaValores(grupo);
+  }
+
   /*
   retornaSelecoes(grupo: String) {
     this.selecoesService.retornaSelecoes(grupo);

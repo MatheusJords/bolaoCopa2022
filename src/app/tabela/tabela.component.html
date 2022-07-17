@@ -40,237 +40,250 @@
     <div class="tabelas-titulo">
         <h3>Grupo B</h3>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Classificação</th>
-                <th scope="col">Pts</th>
-                <th scope="col">PJ</th>
-                <th scope="col">V</th>
-                <th scope="col">E</th>
-                <th scope="col">D</th>
-                <th scope="col">GP</th>
-                <th scope="col">GC</th>
-                <th scope="col">SG</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="grupoB">
-            <tr *ngFor="let selecao of grupoB; index as i">
-                <th class="tabela-selecao">{{selecao.nome}}</th>
-                    <th>{{selecao.pontos}}</th>
-                    <th>{{atualizaPartidas(selecao,grupoB)}}</th>
-                    <th>{{atualizaVitorias(selecao,grupoB)}}</th>
-                    <th>{{atualizaEmpate(selecao,grupoB)}}</th>
-                    <th>{{atualizaDerrota(selecao,grupoB)}}</th>
-                    <th>{{atualizaGolsPro(selecao,grupoB)}}</th>
-                    <th>{{atualizaGolsContra(selecao,grupoB)}}</th>
-                    <th>{{atualizaSaldoGols(selecao,grupoB)}}</th>
+    <div class="tabela-corpo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Classificação</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">V</th>
+                    <th scope="col">E</th>
+                    <th scope="col">D</th>
+                    <th scope="col">GP</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">SG</th>
                 </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody *ngIf="grupoB">
+                <tr *ngFor="let selecao of grupoB; index as i">
+                    <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th>{{selecao.pontos}}</th>
+                        <th>{{atualizaPartidas(selecao,grupoB)}}</th>
+                        <th>{{atualizaVitorias(selecao,grupoB)}}</th>
+                        <th>{{atualizaEmpate(selecao,grupoB)}}</th>
+                        <th>{{atualizaDerrota(selecao,grupoB)}}</th>
+                        <th>{{atualizaGolsPro(selecao,grupoB)}}</th>
+                        <th>{{atualizaGolsContra(selecao,grupoB)}}</th>
+                        <th>{{atualizaSaldoGols(selecao,grupoB)}}</th>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div class="grupos">
     <div class="tabelas-titulo">
         <h3>Grupo C</h3>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Classificação</th>
-                <th scope="col">Pts</th>
-                <th scope="col">PJ</th>
-                <th scope="col">V</th>
-                <th scope="col">E</th>
-                <th scope="col">D</th>
-                <th scope="col">GP</th>
-                <th scope="col">GC</th>
-                <th scope="col">SG</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="grupoC">
-            <tr *ngFor="let selecao of grupoC; index as i">
-                    <th class="tabela-selecao">{{selecao.nome}}</th>
-                    <th>{{selecao.pontos}}</th>
-                    <th>{{atualizaPartidas(selecao,grupoC)}}</th>
-                    <th>{{atualizaVitorias(selecao,grupoC)}}</th>
-                    <th>{{atualizaEmpate(selecao,grupoC)}}</th>
-                    <th>{{atualizaDerrota(selecao,grupoC)}}</th>
-                    <th>{{atualizaGolsPro(selecao,grupoC)}}</th>
-                    <th>{{atualizaGolsContra(selecao,grupoC)}}</th>
-                    <th>{{atualizaSaldoGols(selecao,grupoC)}}</th>
+    <div class="tabela-corpo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Classificação</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">V</th>
+                    <th scope="col">E</th>
+                    <th scope="col">D</th>
+                    <th scope="col">GP</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">SG</th>
                 </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody *ngIf="grupoC">
+                <tr *ngFor="let selecao of grupoC; index as i">
+                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th>{{selecao.pontos}}</th>
+                        <th>{{atualizaPartidas(selecao,grupoC)}}</th>
+                        <th>{{atualizaVitorias(selecao,grupoC)}}</th>
+                        <th>{{atualizaEmpate(selecao,grupoC)}}</th>
+                        <th>{{atualizaDerrota(selecao,grupoC)}}</th>
+                        <th>{{atualizaGolsPro(selecao,grupoC)}}</th>
+                        <th>{{atualizaGolsContra(selecao,grupoC)}}</th>
+                        <th>{{atualizaSaldoGols(selecao,grupoC)}}</th>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div class="grupos">
     <div class="tabelas-titulo">
         <h3>Grupo D</h3>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Classificação</th>
-                <th scope="col">Pts</th>
-                <th scope="col">PJ</th>
-                <th scope="col">V</th>
-                <th scope="col">E</th>
-                <th scope="col">D</th>
-                <th scope="col">GP</th>
-                <th scope="col">GC</th>
-                <th scope="col">SG</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="grupoD">
-            <tr *ngFor="let selecao of grupoD; index as i">
-                    <th class="tabela-selecao">{{selecao.nome}}</th>
-                    <th>{{selecao.pontos}}</th>
-                    <th>{{atualizaPartidas(selecao,grupoD)}}</th>
-                    <th>{{atualizaVitorias(selecao,grupoD)}}</th>
-                    <th>{{atualizaEmpate(selecao,grupoD)}}</th>
-                    <th>{{atualizaDerrota(selecao,grupoD)}}</th>
-                    <th>{{atualizaGolsPro(selecao,grupoD)}}</th>
-                    <th>{{atualizaGolsContra(selecao,grupoD)}}</th>
-                    <th>{{atualizaSaldoGols(selecao,grupoD)}}</th>
+    <div class="tabela-corpo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Classificação</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">V</th>
+                    <th scope="col">E</th>
+                    <th scope="col">D</th>
+                    <th scope="col">GP</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">SG</th>
                 </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody *ngIf="grupoD">
+                <tr *ngFor="let selecao of grupoD; index as i">
+                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th>{{selecao.pontos}}</th>
+                        <th>{{atualizaPartidas(selecao,grupoD)}}</th>
+                        <th>{{atualizaVitorias(selecao,grupoD)}}</th>
+                        <th>{{atualizaEmpate(selecao,grupoD)}}</th>
+                        <th>{{atualizaDerrota(selecao,grupoD)}}</th>
+                        <th>{{atualizaGolsPro(selecao,grupoD)}}</th>
+                        <th>{{atualizaGolsContra(selecao,grupoD)}}</th>
+                        <th>{{atualizaSaldoGols(selecao,grupoD)}}</th>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div class="grupos">
     <div class="tabelas-titulo">
         <h3>Grupo E</h3>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Classificação</th>
-                <th scope="col">Pts</th>
-                <th scope="col">PJ</th>
-                <th scope="col">V</th>
-                <th scope="col">E</th>
-                <th scope="col">D</th>
-                <th scope="col">GP</th>
-                <th scope="col">GC</th>
-                <th scope="col">SG</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="grupoE">
-            <tr *ngFor="let selecao of grupoE; index as i">
-                    <th class="tabela-selecao">{{selecao.nome}}</th>
-                    <th>{{selecao.pontos}}</th>
-                    <th>{{atualizaPartidas(selecao,grupoE)}}</th>
-                    <th>{{atualizaVitorias(selecao,grupoE)}}</th>
-                    <th>{{atualizaEmpate(selecao,grupoE)}}</th>
-                    <th>{{atualizaDerrota(selecao,grupoE)}}</th>
-                    <th>{{atualizaGolsPro(selecao,grupoE)}}</th>
-                    <th>{{atualizaGolsContra(selecao,grupoE)}}</th>
-                    <th>{{atualizaSaldoGols(selecao,grupoE)}}</th>
+    <div class="tabela-corpo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Classificação</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">V</th>
+                    <th scope="col">E</th>
+                    <th scope="col">D</th>
+                    <th scope="col">GP</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">SG</th>
                 </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody *ngIf="grupoE">
+                <tr *ngFor="let selecao of grupoE; index as i">
+                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th>{{selecao.pontos}}</th>
+                        <th>{{atualizaPartidas(selecao,grupoE)}}</th>
+                        <th>{{atualizaVitorias(selecao,grupoE)}}</th>
+                        <th>{{atualizaEmpate(selecao,grupoE)}}</th>
+                        <th>{{atualizaDerrota(selecao,grupoE)}}</th>
+                        <th>{{atualizaGolsPro(selecao,grupoE)}}</th>
+                        <th>{{atualizaGolsContra(selecao,grupoE)}}</th>
+                        <th>{{atualizaSaldoGols(selecao,grupoE)}}</th>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div class="grupos">
     <div class="tabelas-titulo">
         <h3>Grupo F</h3>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Classificação</th>
-                <th scope="col">Pts</th>
-                <th scope="col">PJ</th>
-                <th scope="col">V</th>
-                <th scope="col">E</th>
-                <th scope="col">D</th>
-                <th scope="col">GP</th>
-                <th scope="col">GC</th>
-                <th scope="col">SG</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="grupoF">
-            <tr *ngFor="let selecao of grupoF; index as i">
-                    <th class="tabela-selecao">{{selecao.nome}}</th>
-                    <th>{{selecao.pontos}}</th>
-                    <th>{{atualizaPartidas(selecao,grupoF)}}</th>
-                    <th>{{atualizaVitorias(selecao,grupoF)}}</th>
-                    <th>{{atualizaEmpate(selecao,grupoF)}}</th>
-                    <th>{{atualizaDerrota(selecao,grupoF)}}</th>
-                    <th>{{atualizaGolsPro(selecao,grupoF)}}</th>
-                    <th>{{atualizaGolsContra(selecao,grupoF)}}</th>
-                    <th>{{atualizaSaldoGols(selecao,grupoF)}}</th>
+    <div class="tabela-corpo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Classificação</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">V</th>
+                    <th scope="col">E</th>
+                    <th scope="col">D</th>
+                    <th scope="col">GP</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">SG</th>
                 </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody *ngIf="grupoF">
+                <tr *ngFor="let selecao of grupoF; index as i">
+                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th>{{selecao.pontos}}</th>
+                        <th>{{atualizaPartidas(selecao,grupoF)}}</th>
+                        <th>{{atualizaVitorias(selecao,grupoF)}}</th>
+                        <th>{{atualizaEmpate(selecao,grupoF)}}</th>
+                        <th>{{atualizaDerrota(selecao,grupoF)}}</th>
+                        <th>{{atualizaGolsPro(selecao,grupoF)}}</th>
+                        <th>{{atualizaGolsContra(selecao,grupoF)}}</th>
+                        <th>{{atualizaSaldoGols(selecao,grupoF)}}</th>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div class="grupos">
     <div class="tabelas-titulo">
         <h3>Grupo G</h3>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Classificação</th>
-                <th scope="col">Pts</th>
-                <th scope="col">PJ</th>
-                <th scope="col">V</th>
-                <th scope="col">E</th>
-                <th scope="col">D</th>
-                <th scope="col">GP</th>
-                <th scope="col">GC</th>
-                <th scope="col">SG</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="grupoG">
-            <tr *ngFor="let selecao of grupoG; index as i">
-                    <th class="tabela-selecao">{{selecao.nome}}</th>
-                    <th>{{selecao.pontos}}</th>
-                    <th>{{atualizaPartidas(selecao,grupoG)}}</th>
-                    <th>{{atualizaVitorias(selecao,grupoG)}}</th>
-                    <th>{{atualizaEmpate(selecao,grupoG)}}</th>
-                    <th>{{atualizaDerrota(selecao,grupoG)}}</th>
-                    <th>{{atualizaGolsPro(selecao,grupoG)}}</th>
-                    <th>{{atualizaGolsContra(selecao,grupoG)}}</th>
-                    <th>{{atualizaSaldoGols(selecao,grupoG)}}</th>
+    <div class="tabela-corpo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Classificação</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">V</th>
+                    <th scope="col">E</th>
+                    <th scope="col">D</th>
+                    <th scope="col">GP</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">SG</th>
                 </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody *ngIf="grupoG">
+                <tr *ngFor="let selecao of grupoG; index as i">
+                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th>{{selecao.pontos}}</th>
+                        <th>{{atualizaPartidas(selecao,grupoG)}}</th>
+                        <th>{{atualizaVitorias(selecao,grupoG)}}</th>
+                        <th>{{atualizaEmpate(selecao,grupoG)}}</th>
+                        <th>{{atualizaDerrota(selecao,grupoG)}}</th>
+                        <th>{{atualizaGolsPro(selecao,grupoG)}}</th>
+                        <th>{{atualizaGolsContra(selecao,grupoG)}}</th>
+                        <th>{{atualizaSaldoGols(selecao,grupoG)}}</th>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div class="grupos">
     <div class="tabelas-titulo">
         <h3>Grupo H</h3>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Classificação</th>
-                <th scope="col">Pts</th>
-                <th scope="col">PJ</th>
-                <th scope="col">V</th>
-                <th scope="col">E</th>
-                <th scope="col">D</th>
-                <th scope="col">GP</th>
-                <th scope="col">GC</th>
-                <th scope="col">SG</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="grupoH">
-            <tr *ngFor="let selecao of grupoH; index as i">
-                    <th class="tabela-selecao">{{selecao.nome}}</th>
-                    <th>{{selecao.pontos}}</th>
-                    <th>{{atualizaPartidas(selecao,grupoH)}}</th>
-                    <th>{{atualizaVitorias(selecao,grupoH)}}</th>
-                    <th>{{atualizaEmpate(selecao,grupoH)}}</th>
-                    <th>{{atualizaDerrota(selecao,grupoH)}}</th>
-                    <th>{{atualizaGolsPro(selecao,grupoH)}}</th>
-                    <th>{{atualizaGolsContra(selecao,grupoH)}}</th>
-                    <th>{{atualizaSaldoGols(selecao,grupoH)}}</th>
+    <div class="tabela-corpo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Classificação</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">V</th>
+                    <th scope="col">E</th>
+                    <th scope="col">D</th>
+                    <th scope="col">GP</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">SG</th>
                 </tr>
-        </tbody>
-    </table>
-    
+            </thead>
+            <tbody *ngIf="grupoH">
+                <tr *ngFor="let selecao of grupoH; index as i">
+                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th>{{selecao.pontos}}</th>
+                        <th>{{atualizaPartidas(selecao,grupoH)}}</th>
+                        <th>{{atualizaVitorias(selecao,grupoH)}}</th>
+                        <th>{{atualizaEmpate(selecao,grupoH)}}</th>
+                        <th>{{atualizaDerrota(selecao,grupoH)}}</th>
+                        <th>{{atualizaGolsPro(selecao,grupoH)}}</th>
+                        <th>{{atualizaGolsContra(selecao,grupoH)}}</th>
+                        <th>{{atualizaSaldoGols(selecao,grupoH)}}</th>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

@@ -7,20 +7,16 @@
 }
 
 .rodada-nome{
-    
+    height: 80px;
     display: flex;
-    
-    
-    /* align-content: flex-end; */
-    
+    align-items: flex-end;
 }
 
 .rodada-nome-title{
-    height: 80px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 20px 0;
 }
 
 .rodada-grupos{

@@ -2,11 +2,14 @@
     <!-- <h6>{{mostraRodada()}}</h6> -->
     <div class="rodada-nome">
         <div class="rodada-nome-title">
-            <button [disabled]="rodada1" (click)="visualizarRodadaAnterior()" type="input" class="col-2 btn btn-primary">
-                << </button>
-                <h3>{{mostraRodada()}}</h3>
-            <button [disabled]="rodada3" (click)="visualizarProximaRodada()" type="input" class="col-2 btn btn-primary"> >>
-                </button>
+            <!-- <button [disabled]="rodada1" (click)="visualizarRodadaAnterior()" type="input" class="col-2 btn btn-primary">
+                << </button> -->
+                
+            <!-- <button [disabled]="rodada3" (click)="visualizarProximaRodada()" type="input" class="col-2 btn btn-primary"> >>
+                </button> -->
+            <a href=""><i class="fa-solid fa-angles-left"></i></a>
+            <h3>{{mostraRodada()}}</h3>
+            <a href=""><i class="fa-solid fa-angles-right"></i></a>
         </div>
         
     </div>

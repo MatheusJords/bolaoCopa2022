@@ -109,7 +109,9 @@ export class TabelaComponent implements OnInit {
     })
   }
   */
-  
+  carregaFlag(){
+    return "flag-icon flag-icon-br";
+  }
 
   retornaSelecoes(grupo: String):Array<Selecoes> {
     return this.selecoesService.retornaSelecoes(grupo);

@@ -20,7 +20,11 @@
             </thead>
             <tbody *ngIf="grupoA">
                 <tr *ngFor="let selecao of grupoACopia; index as i">
-                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th class="tabela-selecao">
+                        <!--<span class="flag-icon flag-icon-br"></span>-->
+                        <span [ngClass]="[carregaFlag()]"></span>
+                        {{selecao.nome}}
+                        </th>
                         <th>{{selecao.pontos}}</th>
                         <th>{{atualizaPartidas(selecao,grupoA)}}</th>
                         <th>{{atualizaVitorias(selecao,grupoA)}}</th>

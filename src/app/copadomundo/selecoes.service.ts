@@ -40,35 +40,35 @@ export class SelecoesService {
     this.criaSelecao("EUA","B",3,"us");
     this.criaSelecao("Gales","B",4,"en");
 
-    this.criaSelecao("Argentina","C",1);
-    this.criaSelecao("Arábia Saudita","C",2);
-    this.criaSelecao("México","C",3);
-    this.criaSelecao("Polônia","C",4);
+    this.criaSelecao("Argentina","C",1,"ar");
+    this.criaSelecao("Arábia Saudita","C",2,"sa");
+    this.criaSelecao("México","C",3,"mx");
+    this.criaSelecao("Polônia","C",4,"pl");
 
-    this.criaSelecao("França","D",1);
-    this.criaSelecao("Austrália","D",2);
-    this.criaSelecao("Dinamarca","D",3);
-    this.criaSelecao("Tunísia","D",4);
+    this.criaSelecao("França","D",1,"fr");
+    this.criaSelecao("Austrália","D",2,"au");
+    this.criaSelecao("Dinamarca","D",3,"dk");
+    this.criaSelecao("Tunísia","D",4,"tn");
 
-    this.criaSelecao("Espanha","E",1);
-    this.criaSelecao("Costa Rica","E",2);
-    this.criaSelecao("Alemanha","E",3);
-    this.criaSelecao("Japão","E",4);
+    this.criaSelecao("Espanha","E",1,"es");
+    this.criaSelecao("Costa Rica","E",2,"cr");
+    this.criaSelecao("Alemanha","E",3,"de");
+    this.criaSelecao("Japão","E",4,"jp");
 
-    this.criaSelecao("Bélgica","F",1);
-    this.criaSelecao("Canadá","F",2);
-    this.criaSelecao("Marrocos","F",3);
-    this.criaSelecao("Croácia","F",4);
+    this.criaSelecao("Bélgica","F",1,"be");
+    this.criaSelecao("Canadá","F",2,"ca");
+    this.criaSelecao("Marrocos","F",3,"ma");
+    this.criaSelecao("Croácia","F",4,"hr");
 
-    this.criaSelecao("Brasil","G",1);
-    this.criaSelecao("Sérvia","G",2);
-    this.criaSelecao("Suíça","G",3);
-    this.criaSelecao("Camarões","G",4);
+    this.criaSelecao("Brasil","G",1,"br");
+    this.criaSelecao("Sérvia","G",2,"rs");
+    this.criaSelecao("Suíça","G",3,"ch");
+    this.criaSelecao("Camarões","G",4,"cm");
 
-    this.criaSelecao("Portugal","H",1);
-    this.criaSelecao("Gana","H",2);
-    this.criaSelecao("Uruguai","H",3);
-    this.criaSelecao("Coreia do Sul","H",4);
+    this.criaSelecao("Portugal","H",1,"pt");
+    this.criaSelecao("Gana","H",2,"gh");
+    this.criaSelecao("Uruguai","H",3,"uy");
+    this.criaSelecao("Coreia do Sul","H",4,"kr");
     this.preencheGrupo();
   }
 

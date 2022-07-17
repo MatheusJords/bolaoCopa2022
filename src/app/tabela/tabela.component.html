@@ -98,7 +98,7 @@
             </thead>
             <tbody *ngIf="grupoC">
                 <tr *ngFor="let selecao of grupoC; index as i">
-                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th class="tabela-selecao"><span [ngClass]="[carregaFlag(selecao)]"></span>{{selecao.nome}}</th>
                         <th>{{selecao.pontos}}</th>
                         <th>{{atualizaPartidas(selecao,grupoC)}}</th>
                         <th>{{atualizaVitorias(selecao,grupoC)}}</th>
@@ -134,7 +134,7 @@
             </thead>
             <tbody *ngIf="grupoD">
                 <tr *ngFor="let selecao of grupoD; index as i">
-                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th class="tabela-selecao"><span [ngClass]="[carregaFlag(selecao)]"></span>{{selecao.nome}}</th>
                         <th>{{selecao.pontos}}</th>
                         <th>{{atualizaPartidas(selecao,grupoD)}}</th>
                         <th>{{atualizaVitorias(selecao,grupoD)}}</th>
@@ -170,7 +170,7 @@
             </thead>
             <tbody *ngIf="grupoE">
                 <tr *ngFor="let selecao of grupoE; index as i">
-                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th class="tabela-selecao"><span [ngClass]="[carregaFlag(selecao)]"></span>{{selecao.nome}}</th>
                         <th>{{selecao.pontos}}</th>
                         <th>{{atualizaPartidas(selecao,grupoE)}}</th>
                         <th>{{atualizaVitorias(selecao,grupoE)}}</th>
@@ -206,7 +206,7 @@
             </thead>
             <tbody *ngIf="grupoF">
                 <tr *ngFor="let selecao of grupoF; index as i">
-                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th class="tabela-selecao"><span [ngClass]="[carregaFlag(selecao)]"></span>{{selecao.nome}}</th>
                         <th>{{selecao.pontos}}</th>
                         <th>{{atualizaPartidas(selecao,grupoF)}}</th>
                         <th>{{atualizaVitorias(selecao,grupoF)}}</th>
@@ -242,7 +242,7 @@
             </thead>
             <tbody *ngIf="grupoG">
                 <tr *ngFor="let selecao of grupoG; index as i">
-                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th class="tabela-selecao"><span [ngClass]="[carregaFlag(selecao)]"></span>{{selecao.nome}}</th>
                         <th>{{selecao.pontos}}</th>
                         <th>{{atualizaPartidas(selecao,grupoG)}}</th>
                         <th>{{atualizaVitorias(selecao,grupoG)}}</th>
@@ -278,7 +278,7 @@
             </thead>
             <tbody *ngIf="grupoH">
                 <tr *ngFor="let selecao of grupoH; index as i">
-                        <th class="tabela-selecao">{{selecao.nome}}</th>
+                        <th class="tabela-selecao"><span [ngClass]="[carregaFlag(selecao)]"></span>{{selecao.nome}}</th>
                         <th>{{selecao.pontos}}</th>
                         <th>{{atualizaPartidas(selecao,grupoH)}}</th>
                         <th>{{atualizaVitorias(selecao,grupoH)}}</th>

@@ -100,6 +100,27 @@ export class SelecoesService {
     })
   }
 
+  ordenaValores(grupo:String){
+    this.retornaSelecoes(grupo);
+    let arrayOrdenado = [...this.selecoesDoGrupo]
+    let mapped = arrayOrdenado.map(function(el, i) {
+      return { index: i, value: el.pontos };
+    })
+    
+    // ordenando o array mapeado contendo os dados resumidos
+    mapped.sort(function(a, b) {
+      return +(a.value < b.value) || +(a.value === b.value) - 1;
+    });
+    
+    // container para o resultado ordenado
+    var result = mapped.map(function(el){
+      return arrayOrdenado[el.index];
+    });
+
+    console.log("Valores:", result)
+  }
+
+
   retornaSelecoes(grupo:String){
     this.selecoesDoGrupo = [];
     if(grupo.includes("A")){
@@ -233,7 +254,5 @@ export class SelecoesService {
 
     return selecaoSelecionada.saldogols
   }
-
   
-
 }

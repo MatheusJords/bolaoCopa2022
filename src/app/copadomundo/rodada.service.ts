@@ -43,12 +43,12 @@ export class RodadaService {
   }
 
   vitoriaMandanteR3(mandante:Selecoes,visitante:Selecoes){
+    mandante.pontosrodada3 = 3;
+    visitante.pontosrodada3 = 0;
+    
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
 
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-
-    mandante.pontosrodada3 = 3;
-    visitante.pontosrodada3 = 0;
 
     mandante.partida3 = 1;
     visitante.partida3 = 1;
@@ -67,12 +67,12 @@ export class RodadaService {
   }
 
   vitoriaVisitanteR3(mandante:Selecoes,visitante:Selecoes){
+    mandante.pontosrodada3 = 0;
+    visitante.pontosrodada3 = 3;
+
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
 
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-
-    mandante.pontosrodada3 = 0;
-    visitante.pontosrodada3 = 3;
 
     mandante.partida3 = 1;
     visitante.partida3 = 1;
@@ -91,12 +91,12 @@ export class RodadaService {
   }
 
   EmpateR3(mandante:Selecoes,visitante:Selecoes){
+    mandante.pontosrodada3 = 1;
+    visitante.pontosrodada3 = 1;
+    
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
 
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-
-    mandante.pontosrodada3 = 1;
-    visitante.pontosrodada3 = 1;
 
     mandante.partida3 = 1;
     visitante.partida3 = 1;
@@ -115,12 +115,12 @@ export class RodadaService {
   }
 
   vitoriaMandanteR2(mandante:Selecoes,visitante:Selecoes){
+    mandante.pontosrodada2 = 3;
+    visitante.pontosrodada2 = 0;
+    
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
 
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-
-    mandante.pontosrodada2 = 3;
-    visitante.pontosrodada2 = 0;
 
     mandante.partida2 = 1;
     visitante.partida2 = 1;
@@ -139,12 +139,12 @@ export class RodadaService {
   }
 
   vitoriaVisitanteR2(mandante:Selecoes,visitante:Selecoes){    
+    mandante.pontosrodada2 = 0;
+    visitante.pontosrodada2 = 3;
+    
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
 
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    
-    mandante.pontosrodada2 = 0;
-    visitante.pontosrodada2 = 3;
 
     mandante.partida2 = 1;
     visitante.partida2 = 1;
@@ -163,13 +163,12 @@ export class RodadaService {
   }
 
   EmpateR2(mandante:Selecoes,visitante:Selecoes){
-    
+    mandante.pontosrodada2 = 1;
+    visitante.pontosrodada2 = 1;
+
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
     
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-
-    mandante.pontosrodada2 = 1;
-    visitante.pontosrodada2 = 1;
 
     mandante.partida2 = 1;
     visitante.partida2 = 1;
@@ -189,12 +188,12 @@ export class RodadaService {
   }
 
   vitoriaMandanteR1(mandante:Selecoes,visitante:Selecoes){
+    mandante.pontosrodada1 = 3;
+    visitante.pontosrodada1 = 0;
+
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
 
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-    
-    mandante.pontosrodada1 = 3;
-    visitante.pontosrodada1 = 0;
 
     mandante.partida1 = 1;
     visitante.partida1 = 1;
@@ -214,12 +213,12 @@ export class RodadaService {
   }
 
   vitoriaVisitanteR1(mandante:Selecoes,visitante:Selecoes){
+    mandante.pontosrodada1 = 0;
+    visitante.pontosrodada1 = 3;
+    
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
    
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-
-    mandante.pontosrodada1 = 0;
-    visitante.pontosrodada1 = 3;
 
     mandante.partida1 = 1;
     visitante.partida1 = 1;
@@ -238,12 +237,12 @@ export class RodadaService {
   }
 
   EmpateR1(mandante:Selecoes,visitante:Selecoes){
+    mandante.pontosrodada1 = 1;
+    visitante.pontosrodada1 = 1;
+    
     mandante.pontos = mandante.pontosrodada1 + mandante.pontosrodada2 + mandante.pontosrodada3;
   
     visitante.pontos = visitante.pontosrodada1 + visitante.pontosrodada2 + visitante.pontosrodada3;
-
-    mandante.pontosrodada1 = 1;
-    visitante.pontosrodada1 = 1;
 
     mandante.partida1 = 1;
     visitante.partida1 = 1;

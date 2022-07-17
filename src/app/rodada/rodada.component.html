@@ -1,11 +1,14 @@
 <aside>
     <!-- <h6>{{mostraRodada()}}</h6> -->
     <div class="rodada-nome">
-        <button [disabled]="rodada1" (click)="visualizarRodadaAnterior()" type="input" class="col-2 btn btn-primary">
-            << </button>
-            <h3>{{mostraRodada()}}</h3>
-        <button [disabled]="rodada3" (click)="visualizarProximaRodada()" type="input" class="col-2 btn btn-primary"> >>
-            </button>
+        <div class="rodada-nome-title">
+            <button [disabled]="rodada1" (click)="visualizarRodadaAnterior()" type="input" class="col-2 btn btn-primary">
+                << </button>
+                <h3>{{mostraRodada()}}</h3>
+            <button [disabled]="rodada3" (click)="visualizarProximaRodada()" type="input" class="col-2 btn btn-primary"> >>
+                </button>
+        </div>
+        
     </div>
     
     <div class="rodada-grupos">

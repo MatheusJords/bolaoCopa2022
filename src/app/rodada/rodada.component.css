@@ -7,11 +7,19 @@
 }
 
 .rodada-nome{
+    
+    display: flex;
+    
+    
+    /* align-content: flex-end; */
+    
+}
+
+.rodada-nome-title{
     height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-content: center;
     padding: 20px 0;
 }
 

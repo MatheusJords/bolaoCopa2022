@@ -15,6 +15,15 @@ export class SelecoesService {
   grupoF: Array<Selecoes> = [];
   grupoG: Array<Selecoes> = [];
   grupoH: Array<Selecoes> = [];
+  
+  grupoACopia: Array<Selecoes> = [];
+  grupoBCopia: Array<Selecoes> = [];
+  grupoCCopia: Array<Selecoes> = [];
+  grupoDCopia: Array<Selecoes> = [];
+  grupoECopia: Array<Selecoes> = [];
+  grupoFCopia: Array<Selecoes> = [];
+  grupoGCopia: Array<Selecoes> = [];
+  grupoHCopia: Array<Selecoes> = [];
   selecoesDoGrupo: Array<Selecoes> = [];
 
   constructor() { }
@@ -75,87 +84,76 @@ export class SelecoesService {
     this.selecoes.forEach((selecao) => {
       if(selecao.grupo.includes("A")){
         this.grupoA.push(selecao);
+        this.grupoACopia.push(JSON.parse(JSON.stringify(selecao)));
       }
       if(selecao.grupo.includes("B")){
         this.grupoB.push(selecao);
+        this.grupoBCopia.push(JSON.parse(JSON.stringify(selecao)));
       }
       if(selecao.grupo.includes("C")){
         this.grupoC.push(selecao);
+        this.grupoCCopia.push(JSON.parse(JSON.stringify(selecao)));
       }
       if(selecao.grupo.includes("D")){
         this.grupoD.push(selecao);
+        this.grupoDCopia.push(JSON.parse(JSON.stringify(selecao)));
       }
       if(selecao.grupo.includes("E")){
         this.grupoE.push(selecao);
+        this.grupoECopia.push(JSON.parse(JSON.stringify(selecao)));
       }
       if(selecao.grupo.includes("F")){
         this.grupoF.push(selecao);
+        this.grupoFCopia.push(JSON.parse(JSON.stringify(selecao)));
       }
       if(selecao.grupo.includes("G")){
         this.grupoG.push(selecao);
+        this.grupoGCopia.push(JSON.parse(JSON.stringify(selecao)));
       }
       if(selecao.grupo.includes("H")){
         this.grupoH.push(selecao);
+        this.grupoHCopia.push(JSON.parse(JSON.stringify(selecao)));
       }
     })
   }
 
-  ordenaValores(grupo:String){
-    this.retornaSelecoes(grupo);
-    let arrayOrdenado = [...this.selecoesDoGrupo]
-    let mapped = arrayOrdenado.map(function(el, i) {
-      return { index: i, value: el.pontos };
-    })
-    
-    // ordenando o array mapeado contendo os dados resumidos
-    mapped.sort(function(a, b) {
-      return +(a.value < b.value) || +(a.value === b.value) - 1;
-    });
-    
-    // container para o resultado ordenado
-    var result = mapped.map(function(el){
-      return arrayOrdenado[el.index];
-    });
-
-    console.log("Valores:", result)
-  }
 
 
-  retornaSelecoes(grupo:String){
+  retornaSelecoes(grupo:String):Array<Selecoes>{
     this.selecoesDoGrupo = [];
     if(grupo.includes("A")){
       this.selecoesDoGrupo = [...this.grupoA];
-      return true;
+      return this.selecoesDoGrupo;
     }
     if(grupo.includes("B")){
       this.selecoesDoGrupo = [...this.grupoB];
-      return true;
+      return this.selecoesDoGrupo;
     }
     if(grupo.includes("C")){
       this.selecoesDoGrupo = [...this.grupoC];
-      return true;
+      return this.selecoesDoGrupo;
     }
     if(grupo.includes("D")){
       this.selecoesDoGrupo = [...this.grupoD];
-      return true;
+      return this.selecoesDoGrupo;
     }
     if(grupo.includes("E")){
       this.selecoesDoGrupo = [...this.grupoE];
-      return true;
+      return this.selecoesDoGrupo;
     }
     if(grupo.includes("F")){
       this.selecoesDoGrupo = [...this.grupoF];
-      return true;
+      return this.selecoesDoGrupo;
     }
     if(grupo.includes("G")){
       this.selecoesDoGrupo = [...this.grupoG];
-      return true;
+      return this.selecoesDoGrupo;
     }
     if(grupo.includes("H")){
       this.selecoesDoGrupo = [...this.grupoH];
-      return true;
+      return this.selecoesDoGrupo;
     }
-    return false;
+    return this.selecoesDoGrupo;
   }
 
   atualizaPartidas(grupo:Array<Selecoes>,selecao:string){
@@ -254,5 +252,36 @@ export class SelecoesService {
 
     return selecaoSelecionada.saldogols
   }
+
+  /*
+  ordena(grupo: String){
+    this.grupoACopia = JSON.parse(JSON.stringify(this.grupoA))
+    this.grupoBCopia = JSON.parse(JSON.stringify(this.grupoB))
+    this.grupoCCopia = JSON.parse(JSON.stringify(this.grupoC))
+    this.grupoDCopia = JSON.parse(JSON.stringify(this.grupoD))
+    this.grupoECopia = JSON.parse(JSON.stringify(this.grupoE))
+    this.grupoFCopia = JSON.parse(JSON.stringify(this.grupoF))
+    this.grupoGCopia = JSON.parse(JSON.stringify(this.grupoG))
+    this.grupoHCopia = JSON.parse(JSON.stringify(this.grupoH))
+    
+    if(grupo === "A") this.ordenaPorGrupo(this.grupoACopia)
+    if(grupo === "B") this.ordenaPorGrupo(this.grupoBCopia)
+    if(grupo === "C") this.ordenaPorGrupo(this.grupoCCopia)
+    if(grupo === "D") this.ordenaPorGrupo(this.grupoDCopia)
+    if(grupo === "E") this.ordenaPorGrupo(this.grupoECopia)
+    if(grupo === "F") this.ordenaPorGrupo(this.grupoFCopia)
+    if(grupo === "G") this.ordenaPorGrupo(this.grupoGCopia)
+    if(grupo === "H") this.ordenaPorGrupo(this.grupoHCopia)
+  }
+
+  ordenaPorGrupo(grupo:Array<Selecoes>){
+    grupo.sort(function(a,b){
+      if(a.pontos > b.pontos){
+        return -1
+      }
+      return 1
+    })
+  }
+  */
   
 }

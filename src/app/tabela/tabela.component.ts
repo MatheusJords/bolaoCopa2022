@@ -22,6 +22,14 @@ export class TabelaComponent implements OnInit {
   grupoF: Array<Selecoes> = [];
   grupoG: Array<Selecoes> = [];
   grupoH: Array<Selecoes> = [];
+  grupoACopia: Array<Selecoes> = [];
+  grupoBCopia: Array<Selecoes> = [];
+  grupoCCopia: Array<Selecoes> = [];
+  grupoDCopia: Array<Selecoes> = [];
+  grupoECopia: Array<Selecoes> = [];
+  grupoFCopia: Array<Selecoes> = [];
+  grupoGCopia: Array<Selecoes> = [];
+  grupoHCopia: Array<Selecoes> = [];
 
 
   constructor(
@@ -37,7 +45,14 @@ export class TabelaComponent implements OnInit {
     this.grupoF = this.selecoesService.grupoF;
     this.grupoG = this.selecoesService.grupoG;
     this.grupoH = this.selecoesService.grupoH;
-
+    this.grupoACopia = this.selecoesService.grupoACopia;
+    this.grupoBCopia = this.selecoesService.grupoBCopia;
+    this.grupoCCopia = this.selecoesService.grupoCCopia;
+    this.grupoDCopia = this.selecoesService.grupoDCopia;
+    this.grupoECopia = this.selecoesService.grupoECopia;
+    this.grupoFCopia = this.selecoesService.grupoFCopia;
+    this.grupoGCopia = this.selecoesService.grupoGCopia;
+    this.grupoHCopia = this.selecoesService.grupoHCopia;
   }
 
   ngOnInit(): void {
@@ -73,15 +88,23 @@ export class TabelaComponent implements OnInit {
     return this.selecoesService.atualizaSaldoGols(grupo,selecao.nome);
   }
 
-  ordenaValores(grupo:String){
-    this.selecoesService.ordenaValores(grupo);
+  ordena(grupo:String){
+    if(grupo === "A") this.ordenaPorGrupo(this.grupoA);
+
+    console.log("ordenado");
   }
 
-  /*
-  retornaSelecoes(grupo: String) {
-    this.selecoesService.retornaSelecoes(grupo);
-    this.selecoesDoGrupo = this.selecoesService.selecoesDoGrupo;
-    return true
+  ordenaPorGrupo(grupo:Array<Selecoes>){
+    grupo.sort(function(a,b){
+      if(a.pontos > b.pontos){
+        return -1
+      }
+      return 1
+    })
   }
-  */
+  
+
+  retornaSelecoes(grupo: String):Array<Selecoes> {
+    return this.selecoesService.retornaSelecoes(grupo);
+  }
 }

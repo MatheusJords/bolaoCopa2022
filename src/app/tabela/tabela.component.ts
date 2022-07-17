@@ -92,25 +92,11 @@ export class TabelaComponent implements OnInit {
     this.grupoHCopia = this.selecoesService.grupoHCopia;
   }
   
-
-  /*
-  ordena(grupo:String){
-    if(grupo === "A") this.ordenaPorGrupo(this.grupoA);
-
-    console.log("ordenado");
-  }
-
-  ordenaPorGrupo(grupo:Array<Selecoes>){
-    grupo.sort(function(a,b){
-      if(a.pontos > b.pontos){
-        return -1
-      }
-      return 1
-    })
-  }
-  */
-  carregaFlag(){
-    return "flag-icon flag-icon-br";
+  carregaFlag(selecao:Selecoes){
+    if(selecao.flag !== undefined && selecao.flag !== "")
+      return `flag-icon flag-icon-${selecao.flag}`;
+    return `flag-icon flag-icon-${selecao.flag}`;
+    
   }
 
   retornaSelecoes(grupo: String):Array<Selecoes> {

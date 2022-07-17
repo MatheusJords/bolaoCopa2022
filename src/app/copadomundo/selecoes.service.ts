@@ -30,15 +30,15 @@ export class SelecoesService {
 
   criaSelecoesDaCopa(){
     //Grupo A
-    this.criaSelecao("Catar","A",1);
-    this.criaSelecao("Equador","A",2);
-    this.criaSelecao("Senegal","A",3);
-    this.criaSelecao("Holanda","A",4);
+    this.criaSelecao("Catar","A",1,"qa");
+    this.criaSelecao("Equador","A",2,"ec");
+    this.criaSelecao("Senegal","A",3,"sn");
+    this.criaSelecao("Holanda","A",4,"nl");
 
-    this.criaSelecao("Inglaterra","B",1);
-    this.criaSelecao("Irã","B",2);
-    this.criaSelecao("EUA","B",3);
-    this.criaSelecao("Gales","B",4);
+    this.criaSelecao("Inglaterra","B",1,"gb");
+    this.criaSelecao("Irã","B",2,"ir");
+    this.criaSelecao("EUA","B",3,"us");
+    this.criaSelecao("Gales","B",4,"en");
 
     this.criaSelecao("Argentina","C",1);
     this.criaSelecao("Arábia Saudita","C",2);
@@ -72,11 +72,14 @@ export class SelecoesService {
     this.preencheGrupo();
   }
 
-  criaSelecao(nome:string,grupo:string,posicao:number){
+  criaSelecao(nome:string,grupo:string,posicao:number,flag?:string){
     this.selecao = new Selecoes();
     this.selecao.nome = nome;
     this.selecao.grupo = grupo;
     this.selecao.posicao = posicao;
+    if(flag !== undefined){
+      this.selecao.flag = flag;
+    }
     this.selecoes.push(this.selecao);
   }
 

@@ -41,7 +41,7 @@ export class Rodada2Component implements OnInit {
   ngOnInit(): void {
   }
 
-  mudaResultadoR2(mandante: Selecoes, visitante: Selecoes, rodada: number) {
+  mudaResultadoR2(mandante: Selecoes, visitante: Selecoes, rodada: number,grupo ?: any) {
     mandante.g2 = Number(mandante.g2);
     visitante.g2 = Number(visitante.g2);
 
@@ -54,6 +54,8 @@ export class Rodada2Component implements OnInit {
     if (mandante.g2 === visitante.g2) {
       this.rodadaService.EmpateR2(mandante, visitante);
     }
+
+    this.selecoesService.ordena(grupo);
   }
 
 }

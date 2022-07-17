@@ -45,19 +45,13 @@ export class TabelaComponent implements OnInit {
     this.grupoF = this.selecoesService.grupoF;
     this.grupoG = this.selecoesService.grupoG;
     this.grupoH = this.selecoesService.grupoH;
-    this.grupoACopia = this.selecoesService.grupoACopia;
-    this.grupoBCopia = this.selecoesService.grupoBCopia;
-    this.grupoCCopia = this.selecoesService.grupoCCopia;
-    this.grupoDCopia = this.selecoesService.grupoDCopia;
-    this.grupoECopia = this.selecoesService.grupoECopia;
-    this.grupoFCopia = this.selecoesService.grupoFCopia;
-    this.grupoGCopia = this.selecoesService.grupoGCopia;
-    this.grupoHCopia = this.selecoesService.grupoHCopia;
   }
 
   ngOnInit(): void {
     this.grupos = this.gruposService.criaGrupos();
     this.selecoesService.criaSelecoesDaCopa();
+
+    setInterval(() => {this.atualizaValores()},500);
   }
 
   atualizaPartidas(selecao:Selecoes,grupo: Array<Selecoes>){
@@ -87,7 +81,19 @@ export class TabelaComponent implements OnInit {
   atualizaSaldoGols(selecao:Selecoes,grupo: Array<Selecoes>){
     return this.selecoesService.atualizaSaldoGols(grupo,selecao.nome);
   }
+  atualizaValores(){
+    this.grupoACopia = this.selecoesService.grupoACopia;
+    this.grupoBCopia = this.selecoesService.grupoBCopia;
+    this.grupoCCopia = this.selecoesService.grupoCCopia;
+    this.grupoDCopia = this.selecoesService.grupoDCopia;
+    this.grupoECopia = this.selecoesService.grupoECopia;
+    this.grupoFCopia = this.selecoesService.grupoFCopia;
+    this.grupoGCopia = this.selecoesService.grupoGCopia;
+    this.grupoHCopia = this.selecoesService.grupoHCopia;
+  }
+  
 
+  /*
   ordena(grupo:String){
     if(grupo === "A") this.ordenaPorGrupo(this.grupoA);
 
@@ -102,6 +108,7 @@ export class TabelaComponent implements OnInit {
       return 1
     })
   }
+  */
   
 
   retornaSelecoes(grupo: String):Array<Selecoes> {

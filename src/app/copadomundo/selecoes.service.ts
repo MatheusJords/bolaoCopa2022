@@ -253,25 +253,41 @@ export class SelecoesService {
     return selecaoSelecionada.saldogols
   }
 
-  /*
+  
   ordena(grupo: String){
-    this.grupoACopia = JSON.parse(JSON.stringify(this.grupoA))
-    this.grupoBCopia = JSON.parse(JSON.stringify(this.grupoB))
-    this.grupoCCopia = JSON.parse(JSON.stringify(this.grupoC))
-    this.grupoDCopia = JSON.parse(JSON.stringify(this.grupoD))
-    this.grupoECopia = JSON.parse(JSON.stringify(this.grupoE))
-    this.grupoFCopia = JSON.parse(JSON.stringify(this.grupoF))
-    this.grupoGCopia = JSON.parse(JSON.stringify(this.grupoG))
-    this.grupoHCopia = JSON.parse(JSON.stringify(this.grupoH))
     
-    if(grupo === "A") this.ordenaPorGrupo(this.grupoACopia)
-    if(grupo === "B") this.ordenaPorGrupo(this.grupoBCopia)
-    if(grupo === "C") this.ordenaPorGrupo(this.grupoCCopia)
-    if(grupo === "D") this.ordenaPorGrupo(this.grupoDCopia)
-    if(grupo === "E") this.ordenaPorGrupo(this.grupoECopia)
-    if(grupo === "F") this.ordenaPorGrupo(this.grupoFCopia)
-    if(grupo === "G") this.ordenaPorGrupo(this.grupoGCopia)
-    if(grupo === "H") this.ordenaPorGrupo(this.grupoHCopia)
+    if(grupo === "A") {
+      this.grupoACopia = JSON.parse(JSON.stringify(this.grupoA))
+      this.ordenaPorGrupo(this.grupoACopia)
+    }
+    if(grupo === "B") {
+      this.grupoBCopia = JSON.parse(JSON.stringify(this.grupoB))
+      this.ordenaPorGrupo(this.grupoBCopia)
+    }
+    if(grupo === "C") {
+      this.grupoCCopia = JSON.parse(JSON.stringify(this.grupoC))
+      this.ordenaPorGrupo(this.grupoCCopia)
+    }
+    if(grupo === "D") {
+      this.grupoDCopia = JSON.parse(JSON.stringify(this.grupoD))
+      this.ordenaPorGrupo(this.grupoDCopia)
+    }
+    if(grupo === "E") {
+      this.grupoECopia = JSON.parse(JSON.stringify(this.grupoE))
+      this.ordenaPorGrupo(this.grupoECopia)
+    }
+    if(grupo === "F") {
+      this.grupoFCopia = JSON.parse(JSON.stringify(this.grupoF))
+      this.ordenaPorGrupo(this.grupoFCopia)
+    }
+    if(grupo === "G") {
+      this.grupoGCopia = JSON.parse(JSON.stringify(this.grupoG))
+      this.ordenaPorGrupo(this.grupoGCopia)
+    }
+    if(grupo === "H") {
+      this.grupoHCopia = JSON.parse(JSON.stringify(this.grupoH))
+      this.ordenaPorGrupo(this.grupoHCopia)
+    }
   }
 
   ordenaPorGrupo(grupo:Array<Selecoes>){
@@ -282,6 +298,6 @@ export class SelecoesService {
       return 1
     })
   }
-  */
+  
   
 }

@@ -6,12 +6,12 @@
             for="">{{grupoA[0].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoA[0].g3"
-           (change)="mudaResultadoR3(grupoA[0],grupoA[3],3)"
+           (change)="mudaResultadoR3(grupoA[0],grupoA[3],3,'A')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoA[3].g3"
-           (change)="mudaResultadoR3(grupoA[0],grupoA[3],3)"
+           (change)="mudaResultadoR3(grupoA[0],grupoA[3],3,'A')"
            type="text"
            min="0">
     <label  class="col-4 text-center" 
@@ -21,12 +21,12 @@
            for="">{{grupoA[1].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoA[1].g3"
-           (change)="mudaResultadoR3(grupoA[1],grupoA[2],3)"
+           (change)="mudaResultadoR3(grupoA[1],grupoA[2],3,'A')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoA[2].g3"
-           (change)="mudaResultadoR3(grupoA[1],grupoA[2],3)"
+           (change)="mudaResultadoR3(grupoA[1],grupoA[2],3,'A')"
            type="text"
            min="0">
     <label class="col-4 text-center" 
@@ -43,12 +43,12 @@
             for="">{{grupoB[0].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoB[0].g3"
-           (change)="mudaResultadoR3(grupoB[0],grupoB[3],3)"
+           (change)="mudaResultadoR3(grupoB[0],grupoB[3],3,'B')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoB[3].g3"
-           (change)="mudaResultadoR3(grupoB[0],grupoB[3],3)"
+           (change)="mudaResultadoR3(grupoB[0],grupoB[3],3,'B')"
            type="text"
            min="0">
     <label  
@@ -60,12 +60,12 @@
            for="">{{grupoB[1].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoB[1].g3"
-           (change)="mudaResultadoR3(grupoB[1],grupoB[2],3)"
+           (change)="mudaResultadoR3(grupoB[1],grupoB[2],3,'B')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoB[2].g3"
-           (change)="mudaResultadoR3(grupoB[1],grupoB[2],3)"
+           (change)="mudaResultadoR3(grupoB[1],grupoB[2],3,'B')"
            type="text"
            min="0">
     <label 
@@ -83,12 +83,12 @@
             for="">{{grupoC[0].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoC[0].g3"
-           (change)="mudaResultadoR3(grupoC[0],grupoC[3],3)"
+           (change)="mudaResultadoR3(grupoC[0],grupoC[3],3,'C')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoC[3].g3"
-           (change)="mudaResultadoR3(grupoC[0],grupoC[3],3)"
+           (change)="mudaResultadoR3(grupoC[0],grupoC[3],3,'C')"
            type="text"
            min="0">
     <label  
@@ -100,12 +100,12 @@
            for="">{{grupoC[1].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoC[1].g3"
-           (change)="mudaResultadoR3(grupoC[1],grupoC[2],3)"
+           (change)="mudaResultadoR3(grupoC[1],grupoC[2],3,'C')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoC[2].g3"
-           (change)="mudaResultadoR3(grupoC[1],grupoC[2],3)"
+           (change)="mudaResultadoR3(grupoC[1],grupoC[2],3,'C')"
            type="text"
            min="0">
     <label  
@@ -123,12 +123,12 @@
             for="">{{grupoD[0].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoD[0].g3"
-           (change)="mudaResultadoR3(grupoD[0],grupoD[3],3)"
+           (change)="mudaResultadoR3(grupoD[0],grupoD[3],3,'D')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoD[3].g3"
-           (change)="mudaResultadoR3(grupoD[0],grupoD[3],3)"
+           (change)="mudaResultadoR3(grupoD[0],grupoD[3],3,'D')"
            type="text"
            min="0">
     <label 
@@ -140,12 +140,12 @@
            for="">{{grupoD[1].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoD[1].g3"
-           (change)="mudaResultadoR3(grupoD[1],grupoD[2],3)"
+           (change)="mudaResultadoR3(grupoD[1],grupoD[2],3,'D')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoD[2].g3"
-           (change)="mudaResultadoR3(grupoD[1],grupoD[2],3)"
+           (change)="mudaResultadoR3(grupoD[1],grupoD[2],3,'D')"
            type="text"
            min="0">
     <label 
@@ -163,12 +163,12 @@
             for="">{{grupoE[0].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoE[0].g3"
-           (change)="mudaResultadoR3(grupoE[0],grupoE[3],3)"
+           (change)="mudaResultadoR3(grupoE[0],grupoE[3],3,'E')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoE[3].g3"
-           (change)="mudaResultadoR3(grupoE[0],grupoE[3],3)"
+           (change)="mudaResultadoR3(grupoE[0],grupoE[3],3,'E')"
            type="text"
            min="0">
     <label 
@@ -180,12 +180,12 @@
            for="">{{grupoE[1].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoE[1].g3"
-           (change)="mudaResultadoR3(grupoE[1],grupoE[2],3)"
+           (change)="mudaResultadoR3(grupoE[1],grupoE[2],3,'E')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoE[2].g3"
-           (change)="mudaResultadoR3(grupoE[1],grupoE[2],3)"
+           (change)="mudaResultadoR3(grupoE[1],grupoE[2],3,'E')"
            type="text"
            min="0">
     <label  
@@ -203,12 +203,12 @@
             for="">{{grupoF[0].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoF[0].g3"
-           (change)="mudaResultadoR3(grupoF[0],grupoF[3],3)"
+           (change)="mudaResultadoR3(grupoF[0],grupoF[3],3,'F')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoF[3].g3"
-           (change)="mudaResultadoR3(grupoF[0],grupoF[3],3)"
+           (change)="mudaResultadoR3(grupoF[0],grupoF[3],3,'F')"
            type="text"
            min="0">
     <label  
@@ -220,12 +220,12 @@
            for="">{{grupoF[1].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoF[1].g3"
-           (change)="mudaResultadoR3(grupoF[1],grupoF[2],3)"
+           (change)="mudaResultadoR3(grupoF[1],grupoF[2],3,'F')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoF[2].g3"
-           (change)="mudaResultadoR3(grupoF[1],grupoF[2],3)"
+           (change)="mudaResultadoR3(grupoF[1],grupoF[2],3,'F')"
            type="text"
            min="0">
     <label  
@@ -243,12 +243,12 @@
             for="">{{grupoG[0].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoG[0].g3"
-           (change)="mudaResultadoR3(grupoG[0],grupoG[3],3)"
+           (change)="mudaResultadoR3(grupoG[0],grupoG[3],3,'G')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoG[3].g3"
-           (change)="mudaResultadoR3(grupoG[0],grupoG[3],3)"
+           (change)="mudaResultadoR3(grupoG[0],grupoG[3],3,'G')"
            type="text"
            min="0">
     <label  
@@ -260,12 +260,12 @@
            for="">{{grupoG[1].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoG[1].g3"
-           (change)="mudaResultadoR3(grupoG[1],grupoG[2],3)"
+           (change)="mudaResultadoR3(grupoG[1],grupoG[2],3,'G')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoG[2].g3"
-           (change)="mudaResultadoR3(grupoG[1],grupoG[2],3)"
+           (change)="mudaResultadoR3(grupoG[1],grupoG[2],3,'G')"
            type="text"
            min="0">
     <label 
@@ -283,12 +283,12 @@
             for="">{{grupoH[0].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoH[0].g3"
-           (change)="mudaResultadoR3(grupoH[0],grupoH[3],3)"
+           (change)="mudaResultadoR3(grupoH[0],grupoH[3],3,'H')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoH[3].g3"
-           (change)="mudaResultadoR3(grupoH[0],grupoH[3],3)"
+           (change)="mudaResultadoR3(grupoH[0],grupoH[3],3,'H')"
            type="text"
            min="0">
     <label  
@@ -300,12 +300,12 @@
            for="">{{grupoH[1].nome}}</label>
     <input class="col-1" 
            [(ngModel)]="grupoH[1].g3"
-           (change)="mudaResultadoR3(grupoH[1],grupoH[2],3)"
+           (change)="mudaResultadoR3(grupoH[1],grupoH[2],3,'H')"
            type="text"
            min="0"> x
     <input class="col-1" 
            [(ngModel)]="grupoH[2].g3"
-           (change)="mudaResultadoR3(grupoH[1],grupoH[2],3)"
+           (change)="mudaResultadoR3(grupoH[1],grupoH[2],3,'H')"
            type="text"
            min="0">
     <label  

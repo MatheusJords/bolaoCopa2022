@@ -83,6 +83,12 @@ export class SelecoesService {
     this.selecoes.push(this.selecao);
   }
 
+  carregaFlag(selecao:Selecoes){
+    if(selecao.flag !== undefined && selecao.flag !== "")
+      return `flag-icon flag-icon-${selecao.flag}`;
+    return `flag-icon flag-icon-${selecao.flag}`;
+  }
+
   preencheGrupo(){
     this.selecoes.forEach((selecao) => {
       if(selecao.grupo.includes("A")){
@@ -295,9 +301,32 @@ export class SelecoesService {
 
   ordenaPorGrupo(grupo:Array<Selecoes>){
     grupo.sort(function(a,b){
+      //Ordenando por pontos
       if(a.pontos > b.pontos){
         return -1
       }
+
+      //Ordenando por vitórias
+      if(a.pontos === b.pontos){
+        if(a.vitorias > b.vitorias) return -1
+      }
+
+      //Ordenando por saldo de gols
+      if(a.pontos === b.pontos 
+        && a.vitorias === b.vitorias){
+          if(a.saldogols > b.saldogols) return -1
+      }
+
+      //Ordenando por gols pro
+      if(a.pontos === b.pontos 
+        && a.vitorias === b.vitorias 
+        && a.saldogols === b.saldogols){
+          if(a.golspro > b.golspro){
+            return -1
+          }
+        }
+
+      
       return 1
     })
   }

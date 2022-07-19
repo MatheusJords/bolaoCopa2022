@@ -93,10 +93,15 @@ export class TabelaComponent implements OnInit {
   }
   
   carregaFlag(selecao:Selecoes){
-    if(selecao.flag !== undefined && selecao.flag !== "")
-      return `flag-icon flag-icon-${selecao.flag}`;
-    return `flag-icon flag-icon-${selecao.flag}`;
-    
+    return this.selecoesService.carregaFlag(selecao);
+  }
+
+  classificadosPraProximaFase(index:number){
+    if(index === 0 || index === 1){
+      return `tabela-selecao table-success`;
+    }else{
+      return `tabela-selecao table-danger`;
+    }
   }
 
   retornaSelecoes(grupo: String):Array<Selecoes> {

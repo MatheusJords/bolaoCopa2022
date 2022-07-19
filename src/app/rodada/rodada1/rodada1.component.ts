@@ -41,6 +41,10 @@ export class Rodada1Component implements OnInit {
   ngOnInit(): void {
   }
 
+  carregaFlag(selecao:Selecoes){
+    return this.selecoesService.carregaFlag(selecao);
+  }
+
   mudaResultado(mandante:Selecoes,visitante:Selecoes, rodada: number, grupo?:any){
     if(this.rodadaService.ehRodada1(rodada)){
 

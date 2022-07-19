@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { Rodada1Component } from './rodada/rodada1/rodada1.component';
 import { Rodada2Component } from './rodada/rodada2/rodada2.component';
 import { Rodada3Component } from './rodada/rodada3/rodada3.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Rodada3Component } from './rodada/rodada3/rodada3.component';
     RodadaComponent,
     Rodada1Component,
     Rodada2Component,
-    Rodada3Component
+    Rodada3Component,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

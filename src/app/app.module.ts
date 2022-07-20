@@ -13,6 +13,12 @@ import { Rodada1Component } from './rodada/rodada1/rodada1.component';
 import { Rodada2Component } from './rodada/rodada2/rodada2.component';
 import { Rodada3Component } from './rodada/rodada3/rodada3.component';
 import { FooterComponent } from './footer/footer.component';
+import { OitavasDeFinalComponent } from './mata-mata/oitavas-de-final/oitavas-de-final.component';
+import { FaseDeGruposComponent } from './fase-de-grupos/fase-de-grupos.component';
+import { QuartasDeFinalComponent } from './mata-mata/quartas-de-final/quartas-de-final.component';
+import { SemiFinalComponent } from './mata-mata/semi-final/semi-final.component';
+import { FinalComponent } from './mata-mata/final/final.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +28,12 @@ import { FooterComponent } from './footer/footer.component';
     Rodada1Component,
     Rodada2Component,
     Rodada3Component,
-    FooterComponent
+    FooterComponent,
+    OitavasDeFinalComponent,
+    FaseDeGruposComponent,
+    QuartasDeFinalComponent,
+    SemiFinalComponent,
+    FinalComponent
   ],
   imports: [
     BrowserModule,

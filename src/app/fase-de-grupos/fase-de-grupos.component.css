@@ -1,0 +1,26 @@
+.tabela-head{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #d3a02c;
+    color: #fff;
+}
+
+.faseDeGrupos_botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ececec;
+}
+
+.fa-angles-right{
+    font-size: 30px;
+}
+
+.fa-angles-left{
+    font-size: 30px;
+}

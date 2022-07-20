@@ -26,6 +26,8 @@ export class SelecoesService {
   grupoHCopia: Array<Selecoes> = [];
   selecoesDoGrupo: Array<Selecoes> = [];
 
+  faseAtual ?: string;
+
   constructor() { }
 
   criaSelecoesDaCopa(){

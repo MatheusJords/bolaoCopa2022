@@ -36,4 +36,5 @@ export class Selecoes {
     derrota2:number = 0;
     derrota3:number = 0;
     flag: string = "";
+    sigla:string = "";
 }

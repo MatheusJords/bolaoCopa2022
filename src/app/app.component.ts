@@ -12,20 +12,26 @@ export class AppComponent implements OnInit{
   title = 'bolaoCopa2022';
 
   faseAtual ?: string;
+  faseAtualTitulo ?: string;
+
   constructor(private selecoesService: SelecoesService,
               private mataMataService: MataMataService){
   }
 
   ngOnInit(){
-
+    this.faseAtualTitulo = "Fase de grupos";
   }
 
   faseAnterior(){
     this.selecoesService.faseAnterior();
+    this.faseAtualTitulo = this.selecoesService.faseAtualTitulo;
+    console.log(this.faseAtualTitulo);
   }
 
   proximaFase(){
     this.selecoesService.proximaFase();
+    this.faseAtualTitulo = this.selecoesService.faseAtualTitulo;
+    console.log(this.faseAtualTitulo);
   }
 
 

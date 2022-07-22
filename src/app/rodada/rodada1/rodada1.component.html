@@ -3,23 +3,23 @@
        <div *ngIf="grupoA" class="grupos-rodadas">
               <div class="grupos-conteudos-confrontos">
                      <div class="grupos-rodadas-confrontos">
-                            <label class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoA[0])]"></span>{{grupoA[0].nome}}</label>
+                            <label class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoA[0])]"></span>{{grupoA[0].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoA[0].g1"
                                    (change)="mudaResultado(grupoA[0],grupoA[1],1,'A')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoA[1].g1"
                                    (change)="mudaResultado(grupoA[0],grupoA[1],1,'A')" type="text" min="0">
-                            <label *ngIf="grupoA[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoA[1])]"></span>{{grupoA[1].nome}}</label>
+                            <label *ngIf="grupoA[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoA[1])]"></span>{{grupoA[1].sigla}}</label>
                      </div>
 
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoA[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoA[2])]"></span>{{grupoA[2].nome}}</label>
+                            <label *ngIf="grupoA[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoA[2])]"></span>{{grupoA[2].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoA[2].g1"
                                    (change)="mudaResultado(grupoA[2],grupoA[3],1,'A')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoA[3].g1"
                                    (change)="mudaResultado(grupoA[2],grupoA[3],1,'A')" type="text" min="0">
-                            <label *ngIf="grupoA[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoA[3])]"></span>{{grupoA[3].nome}}</label>
+                            <label *ngIf="grupoA[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoA[3])]"></span>{{grupoA[3].sigla}}</label>
                      </div>
               </div>
 
@@ -31,23 +31,23 @@
        <div *ngIf="grupoB" class="grupos-rodadas">
               <div class="grupos-conteudos-confrontos">
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoB" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoB[0])]"></span>{{grupoB[0].nome}}</label>
+                            <label *ngIf="grupoB" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoB[0])]"></span>{{grupoB[0].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoB[0].g1"
                                    (change)="mudaResultado(grupoB[0],grupoB[1],1,'B')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoB[1].g1"
                                    (change)="mudaResultado(grupoB[0],grupoB[1],1,'B')" type="text" min="0">
-                            <label *ngIf="grupoB[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoB[1])]"></span>{{grupoB[1].nome}}</label>
+                            <label *ngIf="grupoB[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoB[1])]"></span>{{grupoB[1].sigla}}</label>
                      </div>
 
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoB[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoB[2])]"></span>{{grupoB[2].nome}}</label>
+                            <label *ngIf="grupoB[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoB[2])]"></span>{{grupoB[2].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoB[2].g1"
                                    (change)="mudaResultado(grupoB[2],grupoB[3],1,'B')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoB[3].g1"
                                    (change)="mudaResultado(grupoB[2],grupoB[3],1,'B')" type="text" min="0">
-                            <label *ngIf="grupoB[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoB[3])]"></span>{{grupoB[3].nome}}</label>
+                            <label *ngIf="grupoB[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoB[3])]"></span>{{grupoB[3].sigla}}</label>
                      </div>
               </div>
        </div>
@@ -56,23 +56,23 @@
        <div *ngIf="grupoC" class="grupos-rodadas">
               <div class="grupos-conteudos-confrontos">
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoC" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoC[0])]"></span>{{grupoC[0].nome}}</label>
+                            <label *ngIf="grupoC" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoC[0])]"></span>{{grupoC[0].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoC[0].g1"
                                    (change)="mudaResultado(grupoC[0],grupoC[1],1,'C')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoC[1].g1"
                                    (change)="mudaResultado(grupoC[0],grupoC[1],1,'C')" type="text" min="0">
-                            <label *ngIf="grupoC[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoC[1])]"></span>{{grupoC[1].nome}}</label>
+                            <label *ngIf="grupoC[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoC[1])]"></span>{{grupoC[1].sigla}}</label>
                      </div>
 
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoC[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoC[2])]"></span>{{grupoC[2].nome}}</label>
+                            <label *ngIf="grupoC[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoC[2])]"></span>{{grupoC[2].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoC[2].g1"
                                    (change)="mudaResultado(grupoC[2],grupoC[3],1,'C')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoC[3].g1"
                                    (change)="mudaResultado(grupoC[2],grupoC[3],1,'C')" type="text" min="0">
-                            <label *ngIf="grupoC[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoC[3])]"></span>{{grupoC[3].nome}}</label>
+                            <label *ngIf="grupoC[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoC[3])]"></span>{{grupoC[3].sigla}}</label>
                      </div>
               </div>
 
@@ -85,23 +85,23 @@
        <div *ngIf="grupoD" class="grupos-rodadas">
               <div class="grupos-conteudos-confrontos">
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoD" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoD[0])]"></span>{{grupoD[0].nome}}</label>
+                            <label *ngIf="grupoD" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoD[0])]"></span>{{grupoD[0].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoD[0].g1"
                                    (change)="mudaResultado(grupoD[0],grupoD[1],1,'D')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoD[1].g1"
                                    (change)="mudaResultado(grupoD[0],grupoD[1],1,'D')" type="text" min="0">
-                            <label *ngIf="grupoD[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoD[1])]"></span>{{grupoD[1].nome}}</label>
+                            <label *ngIf="grupoD[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoD[1])]"></span>{{grupoD[1].sigla}}</label>
                      </div>
 
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoD[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoD[2])]"></span>{{grupoD[2].nome}}</label>
+                            <label *ngIf="grupoD[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoD[2])]"></span>{{grupoD[2].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoD[2].g1"
                                    (change)="mudaResultado(grupoD[2],grupoD[3],1,'D')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoD[3].g1"
                                    (change)="mudaResultado(grupoD[2],grupoD[3],1,'D')" type="text" min="0">
-                            <label *ngIf="grupoD[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoD[3])]"></span>{{grupoD[3].nome}}</label>
+                            <label *ngIf="grupoD[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoD[3])]"></span>{{grupoD[3].sigla}}</label>
                      </div>
               </div>
        </div>
@@ -110,23 +110,23 @@
        <div *ngIf="grupoE" class="grupos-rodadas">
               <div class="grupos-conteudos-confrontos">
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoE" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoE[0])]"></span>{{grupoE[0].nome}}</label>
+                            <label *ngIf="grupoE" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoE[0])]"></span>{{grupoE[0].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoE[0].g1"
                                    (change)="mudaResultado(grupoE[0],grupoE[1],1,'E')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoE[1].g1"
                                    (change)="mudaResultado(grupoE[0],grupoE[1],1,'E')" type="text" min="0">
-                            <label *ngIf="grupoE[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoE[1])]"></span>{{grupoE[1].nome}}</label>
+                            <label *ngIf="grupoE[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoE[1])]"></span>{{grupoE[1].sigla}}</label>
                      </div>
 
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoE[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoE[2])]"></span>{{grupoE[2].nome}}</label>
+                            <label *ngIf="grupoE[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoE[2])]"></span>{{grupoE[2].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoE[2].g1"
                                    (change)="mudaResultado(grupoE[2],grupoE[3],1,'E')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoE[3].g1"
                                    (change)="mudaResultado(grupoE[2],grupoE[3],1,'E')" type="text" min="0">
-                            <label *ngIf="grupoE[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoE[3])]"></span>{{grupoE[3].nome}}</label>
+                            <label *ngIf="grupoE[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoE[3])]"></span>{{grupoE[3].sigla}}</label>
                      </div>
               </div>
        </div>
@@ -135,23 +135,23 @@
        <div *ngIf="grupoF" class="grupos-rodadas">
               <div class="grupos-conteudos-confrontos">
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoF" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoF[0])]"></span>{{grupoF[0].nome}}</label>
+                            <label *ngIf="grupoF" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoF[0])]"></span>{{grupoF[0].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoF[0].g1"
                                    (change)="mudaResultado(grupoF[0],grupoF[1],1,'F')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoF[1].g1"
                                    (change)="mudaResultado(grupoF[0],grupoF[1],1,'F')" type="text" min="0">
-                            <label *ngIf="grupoF[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoF[1])]"></span>{{grupoF[1].nome}}</label>
+                            <label *ngIf="grupoF[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoF[1])]"></span>{{grupoF[1].sigla}}</label>
                      </div>
 
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoF[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoF[2])]"></span>{{grupoF[2].nome}}</label>
+                            <label *ngIf="grupoF[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoF[2])]"></span>{{grupoF[2].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoF[2].g1"
                                    (change)="mudaResultado(grupoF[2],grupoF[3],1,'F')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoF[3].g1"
                                    (change)="mudaResultado(grupoF[2],grupoF[3],1,'F')" type="text" min="0">
-                            <label *ngIf="grupoF[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoF[3])]"></span>{{grupoF[3].nome}}</label>
+                            <label *ngIf="grupoF[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoF[3])]"></span>{{grupoF[3].sigla}}</label>
                      </div>
               </div>
        </div>
@@ -160,23 +160,23 @@
        <div *ngIf="grupoG" class="grupos-rodadas">
               <div class="grupos-conteudos-confrontos">
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoG" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoG[0])]"></span>{{grupoG[0].nome}}</label>
+                            <label *ngIf="grupoG" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoG[0])]"></span>{{grupoG[0].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoG[0].g1"
                                    (change)="mudaResultado(grupoG[0],grupoG[1],1,'G')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoG[1].g1"
                                    (change)="mudaResultado(grupoG[0],grupoG[1],1,'G')" type="text" min="0">
-                            <label *ngIf="grupoG[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoG[1])]"></span>{{grupoG[1].nome}}</label>
+                            <label *ngIf="grupoG[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoG[1])]"></span>{{grupoG[1].sigla}}</label>
                      </div>
 
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoG[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoG[2])]"></span>{{grupoG[2].nome}}</label>
+                            <label *ngIf="grupoG[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoG[2])]"></span>{{grupoG[2].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoG[2].g1"
                                    (change)="mudaResultado(grupoG[2],grupoG[3],1,'G')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoG[3].g1"
                                    (change)="mudaResultado(grupoG[2],grupoG[3],1,'G')" type="text" min="0">
-                            <label *ngIf="grupoG[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoG[3])]"></span>{{grupoG[3].nome}}</label>
+                            <label *ngIf="grupoG[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoG[3])]"></span>{{grupoG[3].sigla}}</label>
                      </div>
               </div>
        </div>
@@ -185,23 +185,23 @@
        <div *ngIf="grupoH" class="grupos-rodadas">
               <div class="grupos-conteudos-confrontos">
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoH" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoH[0])]"></span>{{grupoH[0].nome}}</label>
+                            <label *ngIf="grupoH" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoH[0])]"></span>{{grupoH[0].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoH[0].g1"
                                    (change)="mudaResultado(grupoH[0],grupoH[1],1,'H')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoH[1].g1"
                                    (change)="mudaResultado(grupoH[0],grupoH[1],1,'H')" type="text" min="0">
-                            <label *ngIf="grupoH[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoH[1])]"></span>{{grupoH[1].nome}}</label>
+                            <label *ngIf="grupoH[1]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoH[1])]"></span>{{grupoH[1].sigla}}</label>
                      </div>
 
                      <div class="grupos-rodadas-confrontos">
-                            <label *ngIf="grupoH[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoH[2])]"></span>{{grupoH[2].nome}}</label>
+                            <label *ngIf="grupoH[2]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoH[2])]"></span>{{grupoH[2].sigla}}</label>
                             <input class="col-1" [(ngModel)]="grupoH[2].g1"
                                    (change)="mudaResultado(grupoH[2],grupoH[3],1,'H')" type="text" min="0"><span
                                    class="grupos-rodadas-confrontos-x">X</span>
                             <input class="col-1" [(ngModel)]="grupoH[3].g1"
                                    (change)="mudaResultado(grupoH[2],grupoH[3],1,'H')" type="text" min="0">
-                            <label *ngIf="grupoH[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoH[3])]"></span>{{grupoH[3].nome}}</label>
+                            <label *ngIf="grupoH[3]" class="col-4 text-center" for=""><span [ngClass]="[carregaFlag(grupoH[3])]"></span>{{grupoH[3].sigla}}</label>
                      </div>
               </div>
        </div>

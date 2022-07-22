@@ -18,6 +18,7 @@ import { FaseDeGruposComponent } from './fase-de-grupos/fase-de-grupos.component
 import { QuartasDeFinalComponent } from './mata-mata/quartas-de-final/quartas-de-final.component';
 import { SemiFinalComponent } from './mata-mata/semi-final/semi-final.component';
 import { FinalComponent } from './mata-mata/final/final.component';
+import { MataMataService } from './copadomundo/mata-mata.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { FinalComponent } from './mata-mata/final/final.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [SelecoesService,GruposService,RodadaService],
+  providers: [SelecoesService,GruposService,RodadaService,MataMataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

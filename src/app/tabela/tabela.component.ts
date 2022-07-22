@@ -37,6 +37,9 @@ export class TabelaComponent implements OnInit {
     private gruposService: GruposService,
     private selecoesService: SelecoesService) {
 
+    this.grupos = this.gruposService.criaGrupos();
+    this.selecoesService.criaSelecoesDaCopa();
+
     this.grupoA = this.selecoesService.grupoA;
     this.grupoB = this.selecoesService.grupoB;
     this.grupoC = this.selecoesService.grupoC;
@@ -45,13 +48,12 @@ export class TabelaComponent implements OnInit {
     this.grupoF = this.selecoesService.grupoF;
     this.grupoG = this.selecoesService.grupoG;
     this.grupoH = this.selecoesService.grupoH;
+
+    setInterval(() => {this.atualizaValores()},500);
   }
 
   ngOnInit(): void {
-    this.grupos = this.gruposService.criaGrupos();
-    this.selecoesService.criaSelecoesDaCopa();
-
-    setInterval(() => {this.atualizaValores()},500);
+    
   }
 
   atualizaPartidas(selecao:Selecoes,grupo: Array<Selecoes>){
@@ -81,7 +83,9 @@ export class TabelaComponent implements OnInit {
   atualizaSaldoGols(selecao:Selecoes,grupo: Array<Selecoes>){
     return this.selecoesService.atualizaSaldoGols(grupo,selecao.nome);
   }
+
   atualizaValores(){
+    //console.log(this.grupoACopia)
     this.grupoACopia = this.selecoesService.grupoACopia;
     this.grupoBCopia = this.selecoesService.grupoBCopia;
     this.grupoCCopia = this.selecoesService.grupoCCopia;

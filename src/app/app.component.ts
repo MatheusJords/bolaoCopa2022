@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { MataMataService } from './copadomundo/mata-mata.service';
 import { SelecoesService } from './copadomundo/selecoes.service';
 
 @Component({
@@ -11,26 +12,20 @@ export class AppComponent implements OnInit{
   title = 'bolaoCopa2022';
 
   faseAtual ?: string;
-  constructor(private router: Router,
-              private selecoesService: SelecoesService){
-
+  constructor(private selecoesService: SelecoesService,
+              private mataMataService: MataMataService){
   }
 
   ngOnInit(){
 
   }
 
-  proximaFase(){
-    this.faseAtual = this.selecoesService.faseAtual;
+  faseAnterior(){
+    this.selecoesService.faseAnterior();
+  }
 
-    if(this.faseAtual?.includes("fase-de-grupo"))
-      this.router.navigate(['/oitavas'])
-    if(this.faseAtual?.includes("oitavas-de-final"))
-      this.router.navigate(['/quartas'])
-    if(this.faseAtual?.includes("quartas-de-final"))
-      this.router.navigate(['/semi'])
-    if(this.faseAtual?.includes("semi-final"))
-      this.router.navigate(['/final'])
+  proximaFase(){
+    this.selecoesService.proximaFase();
   }
 
 

@@ -30,6 +30,7 @@ export class TabelaComponent implements OnInit {
   grupoFCopia: Array<Selecoes> = [];
   grupoGCopia: Array<Selecoes> = [];
   grupoHCopia: Array<Selecoes> = [];
+  faseAtualTitulo ?: string;
 
 
   constructor(
@@ -53,7 +54,8 @@ export class TabelaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.faseAtualTitulo = "Fase de grupos";
+    this.selecoesService.faseAtual = "fase-de-grupo";
   }
 
   atualizaPartidas(selecao:Selecoes,grupo: Array<Selecoes>){

@@ -1,0 +1,15 @@
+.oitavas-corpo {
+    width: 100%;
+    position: relative;
+}
+
+.oitavas-tabela-corpo {
+    display: flex;
+    
+    border: 1px solid black;
+}
+
+.oitavas-tabela-confrontos {
+
+}
+

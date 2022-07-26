@@ -20,18 +20,22 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     this.faseAtualTitulo = "Fase de grupos";
+    setInterval(() => this.atualizaFaseAtualTitulo(), 500)
   }
 
   faseAnterior(){
     this.selecoesService.faseAnterior();
     this.faseAtualTitulo = this.selecoesService.faseAtualTitulo;
-    console.log(this.faseAtualTitulo);
   }
 
   proximaFase(){
     this.selecoesService.proximaFase();
     this.faseAtualTitulo = this.selecoesService.faseAtualTitulo;
-    console.log(this.faseAtualTitulo);
+  }
+
+  atualizaFaseAtualTitulo(){
+    this.selecoesService.atualizaFaseAtualTitulo();
+    this.faseAtualTitulo = this.selecoesService.faseAtualTitulo;
   }
 
 

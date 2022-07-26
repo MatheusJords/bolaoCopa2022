@@ -37,7 +37,7 @@ export class SelecoesService {
       this.faseAtualTitulo = "Fase de grupos";
       return
     }
-
+    /*
     if (this.faseAtual?.includes("oitavas-de-final")) {
       this.faseAtualTitulo = "Oitavas-de-final";
       return
@@ -57,15 +57,17 @@ export class SelecoesService {
       this.faseAtualTitulo = "Final"
       return
     }
+    */
 
   }
 
   faseAnterior() {
-    if (this.faseAtual?.includes("oitavas-de-final")) {
+    if (this.faseAtual?.includes("mata-mata")) {
       this.router.navigate(['/'])
       this.atualizaFaseAtualTitulo();
       return
     }
+    /*
     if (this.faseAtual?.includes("quartas-de-final")) {
       this.router.navigate(['/oitavas'])
       this.atualizaFaseAtualTitulo();
@@ -82,13 +84,15 @@ export class SelecoesService {
       this.atualizaFaseAtualTitulo();
       return
     }
+    */
   }
 
   proximaFase() {
     if (this.faseAtual?.includes("fase-de-grupo")) {
-      this.router.navigate(['/oitavas'])
+      this.router.navigate(['/mata-mata'])
       return
     }
+    /*
     if (this.faseAtual?.includes("oitavas-de-final")) {
       this.router.navigate(['/quartas'])
       return
@@ -101,6 +105,7 @@ export class SelecoesService {
       this.router.navigate(['/final'])
       return
     }
+    */
   }
 
   criaSelecoesDaCopa() {

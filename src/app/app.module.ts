@@ -19,6 +19,7 @@ import { QuartasDeFinalComponent } from './mata-mata/quartas-de-final/quartas-de
 import { SemiFinalComponent } from './mata-mata/semi-final/semi-final.component';
 import { FinalComponent } from './mata-mata/final/final.component';
 import { MataMataService } from './copadomundo/mata-mata.service';
+import { MataMataComponent } from './mata-mata/mata-mata.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { MataMataService } from './copadomundo/mata-mata.service';
     FaseDeGruposComponent,
     QuartasDeFinalComponent,
     SemiFinalComponent,
-    FinalComponent
+    FinalComponent,
+    MataMataComponent
   ],
   imports: [
     BrowserModule,

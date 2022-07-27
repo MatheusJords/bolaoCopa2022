@@ -1,3 +1,4 @@
+import { MataMataService } from './../copadomundo/mata-mata.service';
 import { Component, OnInit } from '@angular/core';
 import { SelecoesService } from '../copadomundo/selecoes.service';
 import { Selecoes } from '../selecoes/selecoes';
@@ -33,8 +34,20 @@ export class MataMataComponent implements OnInit {
   quartas6:Selecoes = new Selecoes();
   quartas7:Selecoes = new Selecoes();
   quartas8:Selecoes = new Selecoes();
+
+  semi1:Selecoes = new Selecoes();
+  semi2:Selecoes = new Selecoes();
+  semi3:Selecoes = new Selecoes();
+  semi4:Selecoes = new Selecoes();
+
+  finalista1:Selecoes = new Selecoes();
+  finalista2:Selecoes = new Selecoes();
   
-  constructor(private selecoesService:SelecoesService) { }
+  disputa3lugar1:Selecoes = new Selecoes();
+  disputa3lugar2:Selecoes = new Selecoes();
+
+  constructor(private selecoesService:SelecoesService,
+              private mataMataService:MataMataService) { }
 
   ngOnInit(): void {
     this.selecoesService.faseAtual = "mata-mata";
@@ -73,6 +86,11 @@ export class MataMataComponent implements OnInit {
     //Confronto 8
     this.oitavas15 = this.selecoesService.grupoGCopia[1];
     this.oitavas16 = this.selecoesService.grupoHCopia[0];
+  }
+
+  classificaEquipeQuartas(fase:string, chave:number,selecao:Selecoes){
+    console.log("Ok")
+    this.mataMataService.classificaEquipeQuartas(fase, chave,selecao);
   }
 
   carregaFlagBorder(selecao:Selecoes){

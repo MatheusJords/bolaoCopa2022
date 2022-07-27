@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-6">
         <div class="card col-2">
-            <span style="padding:30px" [ngClass]="[carregaFlagBorder(oitavas1)]"></span>
+            <span style="padding:30px" [ngClass]="[carregaFlagBorder(oitavas1)]" (click)="classificaEquipeQuartas('quartas',1,oitavas1)"></span>
             <br>
-            <span style="padding:30px" [ngClass]="[carregaFlagBorder(oitavas2)]"></span>
+            <span style="padding:30px" [ngClass]="[carregaFlagBorder(oitavas2)]" (click)="classificaEquipeQuartas('quartas',2,oitavas2)"></span>
         </div>
     </div>
 </div>

@@ -75,6 +75,6 @@ export class MataMataComponent implements OnInit {
   }
 
   carregaFlagBorder(selecao:Selecoes){
-    return this.selecoesService.carregaFlag(selecao);
+    return this.selecoesService.carregaFlagBorder(selecao);
   }
 }

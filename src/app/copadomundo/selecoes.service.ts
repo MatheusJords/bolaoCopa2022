@@ -121,7 +121,7 @@ export class SelecoesService {
       this.criaSelecao("Inglaterra", "B", 1, "gb","ING");
       this.criaSelecao("Irã", "B", 2, "ir","IRÃ");
       this.criaSelecao("EUA", "B", 3, "us","EUA");
-      this.criaSelecao("Gales", "B", 4, "en","GAL");
+      this.criaSelecao("Gales", "B", 4, "gb-wls","GAL");
     }
     if (this.grupoC.length === 0) {
       this.criaSelecao("Argentina", "C", 1, "ar","ARG");

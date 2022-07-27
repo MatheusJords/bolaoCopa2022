@@ -33,7 +33,18 @@ export class MataMataComponent implements OnInit {
   quartas6:Selecoes = new Selecoes();
   quartas7:Selecoes = new Selecoes();
   quartas8:Selecoes = new Selecoes();
+
+  semi1:Selecoes = new Selecoes();
+  semi2:Selecoes = new Selecoes();
+  semi3:Selecoes = new Selecoes();
+  semi4:Selecoes = new Selecoes();
+
+  finalista1:Selecoes = new Selecoes();
+  finalista2:Selecoes = new Selecoes();
   
+  disputa3lugar1:Selecoes = new Selecoes();
+  disputa3lugar2:Selecoes = new Selecoes();
+
   constructor(private selecoesService:SelecoesService) { }
 
   ngOnInit(): void {
@@ -73,6 +84,10 @@ export class MataMataComponent implements OnInit {
     //Confronto 8
     this.oitavas15 = this.selecoesService.grupoGCopia[1];
     this.oitavas16 = this.selecoesService.grupoHCopia[0];
+  }
+  
+  classificaEquipe(fase:string, chave:number){
+
   }
 
   carregaFlagBorder(selecao:Selecoes){

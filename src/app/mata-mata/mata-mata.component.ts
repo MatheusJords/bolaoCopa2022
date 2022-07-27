@@ -37,6 +37,7 @@ export class MataMataComponent implements OnInit {
   constructor(private selecoesService:SelecoesService) { }
 
   ngOnInit(): void {
+    this.selecoesService.faseAtual = "mata-mata";
     this.defineConfrontos();
   }
 

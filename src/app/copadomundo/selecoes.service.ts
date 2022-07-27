@@ -183,6 +183,12 @@ export class SelecoesService {
     return `flag-icon flag-icon-${selecao.flag}`;
   }
 
+  carregaFlagBorder(selecao: Selecoes) {
+    if (selecao.flag !== undefined && selecao.flag !== "")
+      return `flag-icon flag-icon-${selecao.flag}`;
+    return `flag-icon flag-icon-${selecao.flag} flag-icon-squared`;
+  }
+
   preencheGrupo() {
     this.selecoes.forEach((selecao) => {
       if (selecao.grupo.includes("A")) {

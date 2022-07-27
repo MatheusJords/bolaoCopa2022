@@ -24,6 +24,15 @@ export class MataMataComponent implements OnInit {
   oitavas14:Selecoes = new Selecoes();
   oitavas15:Selecoes = new Selecoes();
   oitavas16:Selecoes = new Selecoes();
+
+  quartas1:Selecoes = new Selecoes();
+  quartas2:Selecoes = new Selecoes();
+  quartas3:Selecoes = new Selecoes();
+  quartas4:Selecoes = new Selecoes();
+  quartas5:Selecoes = new Selecoes();
+  quartas6:Selecoes = new Selecoes();
+  quartas7:Selecoes = new Selecoes();
+  quartas8:Selecoes = new Selecoes();
   
   constructor(private selecoesService:SelecoesService) { }
 
@@ -65,4 +74,7 @@ export class MataMataComponent implements OnInit {
     this.oitavas16 = this.selecoesService.grupoHCopia[0];
   }
 
+  carregaFlagBorder(selecao:Selecoes){
+    return this.selecoesService.carregaFlag(selecao);
+  }
 }

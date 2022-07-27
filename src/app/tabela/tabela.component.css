@@ -1,21 +1,28 @@
-.flag-icon-background {background-size: contain;
-background-position: 50%;
-background-repeat: no-repeat;}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
 
-.tabelas-titulo{
+.flag-icon-background {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+}
+
+.tabelas-titulo {
     height: 80px;
     display: flex;
     align-items: flex-end;
 }
 
-.table{
+.table {
     margin: 0;
 }
 
-.tabela-corpo{
+.tabela-corpo {
     height: 206px;
 }
 
-.tabela-selecao{
+.tabela-selecao {
     width: 254px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
 }

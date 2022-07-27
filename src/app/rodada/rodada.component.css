@@ -17,9 +17,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+}
+
+.fa-angle-right {
+    font-size: 25px;
+    color: #c4c4c4;
+    cursor: pointer;
+}
+
+.fa-angle-left {
+    font-size: 25px;
+    color: #c4c4c4;
+    cursor: pointer;
 }
 
 .rodada-grupos{
     display: flex;
     flex-direction: column;
 }
+

@@ -1,4 +1,6 @@
 <div class="row">
+    <!-- Chave 1 -->
+    <!-- Oitavas de Final-->
     <div class="offset-md-1 col-md-1">
         <span [ngClass]="[carregaFlagBorder(oitavas1)]" (click)="classificaEquipeQuartas(1,oitavas1)"></span>
         <br>
@@ -36,41 +38,57 @@
         <label>{{oitavas8.sigla}}</label>
         <hr>
     </div>
-    <div style="margin-top: 40px;" class="col-md-1">
-        <span [ngClass]="[carregaFlagBorder(quartas1)]" (click)="classificaEquipeSemi(1,quartas1)"></span>
-        <br>
-        <label>{{quartas1.sigla}}</label>
 
-        <hr>
+    <!-- Quartas de Final-->
+    <div class="col-md-1">
+        <div style="margin-top: 40px;">
+            <span [ngClass]="[carregaFlagBorder(quartas1)]" (click)="classificaEquipeSemi(1,quartas1)"></span>
+            <br>
+            <label>{{quartas1.sigla}}</label>
 
-        <span [ngClass]="[carregaFlagBorder(quartas2)]" (click)="classificaEquipeSemi(1,quartas2)"></span>
-        <br>
-        <label>{{quartas2.sigla}}</label>
-        <hr>
+            <hr>
+        </div>
 
-        <span [ngClass]="[carregaFlagBorder(quartas3)]" (click)="classificaEquipeSemi(2,quartas3)"></span>
-        <br>
-        <label>{{quartas3.sigla}}</label>
-        <hr>
+        <div style="margin-top: 100px;">
+            <span [ngClass]="[carregaFlagBorder(quartas2)]" (click)="classificaEquipeSemi(1,quartas2)"></span>
+            <br>
+            <label>{{quartas2.sigla}}</label>
+            <hr>
+        </div>
 
-        <span [ngClass]="[carregaFlagBorder(quartas4)]" (click)="classificaEquipeSemi(2,quartas4)"></span>
-        <br>
-        <label>{{quartas4.sigla}}</label>
+        <div style="margin-top: 100px;">
+            <span [ngClass]="[carregaFlagBorder(quartas3)]" (click)="classificaEquipeSemi(2,quartas3)"></span>
+            <br>
+            <label>{{quartas3.sigla}}</label>
+            <hr>
+        </div>
+
+        <div style="margin-top: 100px;">
+            <span [ngClass]="[carregaFlagBorder(quartas4)]" (click)="classificaEquipeSemi(2,quartas4)"></span>
+            <br>
+            <label>{{quartas4.sigla}}</label>
+        </div>
     </div>
 
-    <div style="margin-top: 80px;" class="col-md-1">
-        <span [ngClass]="[carregaFlagBorder(semi1)]" (click)="defineFinalistas(1,semi1)"></span>
-        <br>
-        <label>{{semi1.sigla}}</label>
-        <hr>
+    <!-- Semi-Final-->
+    <div class="col-md-1">
+        <div style="margin-top: 130px;">
+            <span [ngClass]="[carregaFlagBorder(semi1)]" (click)="defineFinalistas(1,semi1)"></span>
+            <br>
+            <label>{{semi1.sigla}}</label>
+            <hr>
+        </div>
 
-        <span [ngClass]="[carregaFlagBorder(semi2)]" (click)="defineFinalistas(1,semi2)"></span>
-        <br>
-        <label>{{semi2.sigla}}</label>
-        <hr>
+        <div style="margin-top: 300px;">
+            <span [ngClass]="[carregaFlagBorder(semi2)]" (click)="defineFinalistas(1,semi2)"></span>
+            <br>
+            <label>{{semi2.sigla}}</label>
+            <hr>
+        </div>
     </div>
 
-    <div style="margin-top: 80px;" class="col-md-1">
+    <!-- Final-->
+    <div style="margin-top: 300px;" class="col-md-1">
         <span [ngClass]="[carregaFlagBorder(finalista1)]" (click)="defineCampeao(finalista1)"></span>
         <br>
         <label>{{finalista1.sigla}}</label>
@@ -80,46 +98,62 @@
 
     </div>
 
-    <div style="margin-top: 80px;" class="col-md-1">
+    <!-- Chave 2-->
+    <!-- Final -->
+    <div style="margin-top: 300px;" class="col-md-1">
         <span [ngClass]="[carregaFlagBorder(finalista2)]" (click)="defineCampeao(finalista2)"></span>
         <br>
         <label>{{finalista2.sigla}}</label>
     </div>
 
-    <div style="margin-top: 80px;" class="col-md-1">
-        <span [ngClass]="[carregaFlagBorder(semi3)]" (click)="defineFinalistas(2,semi3)"></span>
-        <br>
-        <label>{{semi3.sigla}}</label>
-        <hr>
+    <!-- Semi-Final-->
+    <div class="col-md-1">
+        <div style="margin-top: 130px;">
+            <span [ngClass]="[carregaFlagBorder(semi3)]" (click)="defineFinalistas(2,semi3)"></span>
+            <br>
+            <label>{{semi3.sigla}}</label>
+            <hr>
+        </div>
 
-        <span [ngClass]="[carregaFlagBorder(semi4)]" (click)="defineFinalistas(2,semi4)"></span>
-        <br>
-        <label>{{semi4.sigla}}</label>
-        <hr>
+        <div style="margin-top: 300px;">
+            <span [ngClass]="[carregaFlagBorder(semi4)]" (click)="defineFinalistas(2,semi4)"></span>
+            <br>
+            <label>{{semi4.sigla}}</label>
+            <hr>
+        </div>
     </div>
 
-    <div style="margin-top: 40px;" class="col-md-1">
-        <span [ngClass]="[carregaFlagBorder(quartas5)]" (click)="classificaEquipeSemi(3,quartas5)"></span>
-        <br>
-        <label>{{quartas5.sigla}}</label>
+    <!-- Quartas de Final-->
+    <div class="col-md-1">
+        <div style="margin-top: 40px;">
+            <span [ngClass]="[carregaFlagBorder(quartas5)]" (click)="classificaEquipeSemi(3,quartas5)"></span>
+            <br>
+            <label>{{quartas5.sigla}}</label>
+            <hr>
+        </div>
 
-        <hr>
+        <div style="margin-top: 100px;">
+            <span [ngClass]="[carregaFlagBorder(quartas6)]" (click)="classificaEquipeSemi(3,quartas6)"></span>
+            <br>
+            <label>{{quartas6.sigla}}</label>
+            <hr>
+        </div>
 
-        <span [ngClass]="[carregaFlagBorder(quartas6)]" (click)="classificaEquipeSemi(3,quartas6)"></span>
-        <br>
-        <label>{{quartas6.sigla}}</label>
-        <hr>
+        <div style="margin-top: 100px;">
+            <span [ngClass]="[carregaFlagBorder(quartas7)]" (click)="classificaEquipeSemi(4,quartas7)"></span>
+            <br>
+            <label>{{quartas7.sigla}}</label>
+            <hr>
+        </div>
 
-        <span [ngClass]="[carregaFlagBorder(quartas7)]" (click)="classificaEquipeSemi(4,quartas7)"></span>
-        <br>
-        <label>{{quartas7.sigla}}</label>
-        <hr>
-
-        <span [ngClass]="[carregaFlagBorder(quartas8)]" (click)="classificaEquipeSemi(4,quartas8)"></span>
-        <br>
-        <label>{{quartas8.sigla}}</label>
+        <div style="margin-top: 100px;">
+            <span [ngClass]="[carregaFlagBorder(quartas8)]" (click)="classificaEquipeSemi(4,quartas8)"></span>
+            <br>
+            <label>{{quartas8.sigla}}</label>
+        </div>
     </div>
 
+    <!-- Oitavas de Final-->
     <div class="col-md-1">
         <span [ngClass]="[carregaFlagBorder(oitavas9)]" (click)="classificaEquipeQuartas(5,oitavas9)"></span>
         <br>

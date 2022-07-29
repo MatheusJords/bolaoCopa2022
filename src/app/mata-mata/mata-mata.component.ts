@@ -51,6 +51,9 @@ export class MataMataComponent implements OnInit {
 
   ngOnInit(): void {
     this.selecoesService.faseAtual = "mata-mata";
+    this.mataMataService.reiniciaMataMata();
+    this.atualizaFinalistas();
+
     this.defineConfrontos();
   }
 

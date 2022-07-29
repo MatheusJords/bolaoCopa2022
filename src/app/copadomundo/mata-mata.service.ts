@@ -131,4 +131,40 @@ export class MataMataService {
     return `p-4 flag-icon flag-icon-${selecao.flag} flag-icon-squared`;
   }
 
+  reiniciaMataMata(){
+    this.oitavas1 = new Selecoes();
+    this.oitavas2 = new Selecoes();
+    this.oitavas3 = new Selecoes();
+    this.oitavas4 = new Selecoes();
+    this.oitavas5 = new Selecoes();
+    this.oitavas6 = new Selecoes();
+    this.oitavas7 = new Selecoes();
+    this.oitavas8 = new Selecoes();
+    this.oitavas9 = new Selecoes();
+    this.oitavas10 = new Selecoes();
+    this.oitavas11 = new Selecoes();
+    this.oitavas12 = new Selecoes();
+    this.oitavas13 = new Selecoes();
+    this.oitavas14 = new Selecoes();
+    this.oitavas15 = new Selecoes();
+    this.oitavas16 = new Selecoes();
+
+    this.quartas1 = new Selecoes();
+    this.quartas2 = new Selecoes();
+    this.quartas3 = new Selecoes();
+    this.quartas4 = new Selecoes();
+    this.quartas5 = new Selecoes();
+    this.quartas6 = new Selecoes();
+    this.quartas7 = new Selecoes();
+    this.quartas8 = new Selecoes();
+
+    this.semi1 = new Selecoes();
+    this.semi2 = new Selecoes();
+    this.semi3 = new Selecoes();
+    this.semi4 = new Selecoes();
+
+    this.finalista1 = new Selecoes();
+    this.finalista2 = new Selecoes();
+  }
+
 }

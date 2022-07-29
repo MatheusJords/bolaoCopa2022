@@ -165,6 +165,8 @@ export class MataMataService {
 
     this.finalista1 = new Selecoes();
     this.finalista2 = new Selecoes();
+
+    this.campeao = new Selecoes();
   }
 
 }

@@ -96,8 +96,11 @@
         <label>{{finalista1.sigla}}</label>
     </div>
 
-    <div class="col-md-2">
-
+    <div style="margin-top: 200px;" class="col-md-2">
+        <h3 style="color:goldenrod;" class="text-center">Campeão</h3>
+        <span style="margin-left:25%;margin-right:25%;" [ngClass]="[carregaFlagBorder(campeao)]"></span>
+        <br>
+        <label style="margin-left:25%;margin-right:25%;">{{campeao.sigla}}</label>
     </div>
 
     <!-- Chave 2-->

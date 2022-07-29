@@ -130,5 +130,8 @@ export class MataMataComponent implements OnInit {
     this.semi2 = this.mataMataService.semi2;
     this.semi3 = this.mataMataService.semi3;
     this.semi4 = this.mataMataService.semi4;
+
+    this.finalista1 = this.mataMataService.finalista1;
+    this.finalista2 = this.mataMataService.finalista2;
   }
 }

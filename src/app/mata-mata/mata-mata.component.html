@@ -1,77 +1,162 @@
 <div class="row">
-    <div class="col-md-5">
-        <div class="row">
+    <div class="offset-md-1 col-md-1">
+        <span [ngClass]="[carregaFlagBorder(oitavas1)]" (click)="classificaEquipeQuartas(1,oitavas1)"></span>
+        <br>
+        <label>{{oitavas1.sigla}}</label>
+        <br>
+        <span [ngClass]="[carregaFlagBorder(oitavas2)]" (click)="classificaEquipeQuartas(1,oitavas2)"></span>
+        <br>
+        <label>{{oitavas2.sigla}}</label>
+        <hr>
 
-            <div class="col-md-3">
-                <span [ngClass]="[carregaFlagBorder(oitavas1)]" (click)="classificaEquipeQuartas(1,oitavas1)"></span>
-                <br>
-                <label>{{oitavas1.sigla}}</label>
-                <br>
-                <span [ngClass]="[carregaFlagBorder(oitavas2)]" (click)="classificaEquipeQuartas(1,oitavas2)"></span>
-                <br>
-                <label>{{oitavas2.sigla}}</label>
-                <hr>
+        <span [ngClass]="[carregaFlagBorder(oitavas3)]" (click)="classificaEquipeQuartas(2,oitavas3)"></span>
+        <br>
+        <label>{{oitavas3.sigla}}</label>
+        <br>
+        <span [ngClass]="[carregaFlagBorder(oitavas4)]" (click)="classificaEquipeQuartas(2,oitavas4)"></span>
+        <br>
+        <label>{{oitavas4.sigla}}</label>
+        <hr>
 
-                <span [ngClass]="[carregaFlagBorder(oitavas3)]" (click)="classificaEquipeQuartas(2,oitavas3)"></span>
-                <br>
-                <label>{{oitavas3.sigla}}</label>
-                <br>
-                <span [ngClass]="[carregaFlagBorder(oitavas4)]" (click)="classificaEquipeQuartas(2,oitavas4)"></span>
-                <br>
-                <label>{{oitavas4.sigla}}</label>
-                <hr>
+        <span [ngClass]="[carregaFlagBorder(oitavas5)]" (click)="classificaEquipeQuartas(3,oitavas5)"></span>
+        <br>
+        <label>{{oitavas5.sigla}}</label>
+        <br>
+        <span [ngClass]="[carregaFlagBorder(oitavas6)]" (click)="classificaEquipeQuartas(3,oitavas6)"></span>
+        <br>
+        <label>{{oitavas6.sigla}}</label>
+        <hr>
 
-                <span [ngClass]="[carregaFlagBorder(oitavas5)]" (click)="classificaEquipeQuartas(3,oitavas5)"></span>
-                <br>
-                <label>{{oitavas5.sigla}}</label>
-                <br>
-                <span [ngClass]="[carregaFlagBorder(oitavas6)]" (click)="classificaEquipeQuartas(3,oitavas6)"></span>
-                <br>
-                <label>{{oitavas6.sigla}}</label>
-                <hr>
-
-                <span [ngClass]="[carregaFlagBorder(oitavas7)]" (click)="classificaEquipeQuartas(4,oitavas7)"></span>
-                <br>
-                <label>{{oitavas7.sigla}}</label>
-                <br>
-                <span [ngClass]="[carregaFlagBorder(oitavas8)]" (click)="classificaEquipeQuartas(4,oitavas8)"></span>
-                <br>
-                <label>{{oitavas8.sigla}}</label>
-                <hr>
-            </div>
-            <div style="margin-top: 40px;" class="col-md-3">
-                <span [ngClass]="[carregaFlagBorder(quartas1)]" (click)="classificaEquipeSemi(1,quartas1)"></span>
-                <br>
-                <label>{{quartas1.sigla}}</label>
-                
-                <hr>
-
-                <span [ngClass]="[carregaFlagBorder(quartas2)]" (click)="classificaEquipeSemi(1,quartas2)"></span>
-                <br>
-                <label>{{quartas2.sigla}}</label>
-                <hr>
-
-                <span [ngClass]="[carregaFlagBorder(quartas3)]" (click)="classificaEquipeSemi(2,quartas3)"></span>
-                <br>
-                <label>{{quartas3.sigla}}</label>
-                <hr>
-
-                <span [ngClass]="[carregaFlagBorder(quartas4)]" (click)="classificaEquipeSemi(2,quartas4)"></span>
-                <br>
-                <label>{{quartas4.sigla}}</label>
-            </div>
-
-            <div style="margin-top: 80px;" class="col-md-3">
-                <span [ngClass]="[carregaFlagBorder(semi1)]" (click)="defineFinalistas(1,semi1)"></span>
-                <br>
-                <label>{{semi1.sigla}}</label>
-                <hr>
-
-                <span [ngClass]="[carregaFlagBorder(semi2)]" (click)="defineFinalistas(1,semi2)"></span>
-                <br>
-                <label>{{semi2.sigla}}</label>
-                <hr>
-            </div>
-        </div>
+        <span [ngClass]="[carregaFlagBorder(oitavas7)]" (click)="classificaEquipeQuartas(4,oitavas7)"></span>
+        <br>
+        <label>{{oitavas7.sigla}}</label>
+        <br>
+        <span [ngClass]="[carregaFlagBorder(oitavas8)]" (click)="classificaEquipeQuartas(4,oitavas8)"></span>
+        <br>
+        <label>{{oitavas8.sigla}}</label>
+        <hr>
     </div>
+    <div style="margin-top: 40px;" class="col-md-1">
+        <span [ngClass]="[carregaFlagBorder(quartas1)]" (click)="classificaEquipeSemi(1,quartas1)"></span>
+        <br>
+        <label>{{quartas1.sigla}}</label>
+
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(quartas2)]" (click)="classificaEquipeSemi(1,quartas2)"></span>
+        <br>
+        <label>{{quartas2.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(quartas3)]" (click)="classificaEquipeSemi(2,quartas3)"></span>
+        <br>
+        <label>{{quartas3.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(quartas4)]" (click)="classificaEquipeSemi(2,quartas4)"></span>
+        <br>
+        <label>{{quartas4.sigla}}</label>
+    </div>
+
+    <div style="margin-top: 80px;" class="col-md-1">
+        <span [ngClass]="[carregaFlagBorder(semi1)]" (click)="defineFinalistas(1,semi1)"></span>
+        <br>
+        <label>{{semi1.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(semi2)]" (click)="defineFinalistas(1,semi2)"></span>
+        <br>
+        <label>{{semi2.sigla}}</label>
+        <hr>
+    </div>
+
+    <div style="margin-top: 80px;" class="col-md-1">
+        <span [ngClass]="[carregaFlagBorder(finalista1)]" (click)="defineCampeao(finalista1)"></span>
+        <br>
+        <label>{{finalista1.sigla}}</label>
+    </div>
+
+    <div class="col-md-2">
+
+    </div>
+
+    <div style="margin-top: 80px;" class="col-md-1">
+        <span [ngClass]="[carregaFlagBorder(finalista2)]" (click)="defineCampeao(finalista2)"></span>
+        <br>
+        <label>{{finalista2.sigla}}</label>
+    </div>
+
+    <div style="margin-top: 80px;" class="col-md-1">
+        <span [ngClass]="[carregaFlagBorder(semi3)]" (click)="defineFinalistas(2,semi3)"></span>
+        <br>
+        <label>{{semi3.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(semi4)]" (click)="defineFinalistas(2,semi4)"></span>
+        <br>
+        <label>{{semi4.sigla}}</label>
+        <hr>
+    </div>
+
+    <div style="margin-top: 40px;" class="col-md-1">
+        <span [ngClass]="[carregaFlagBorder(quartas5)]" (click)="classificaEquipeSemi(3,quartas5)"></span>
+        <br>
+        <label>{{quartas5.sigla}}</label>
+
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(quartas6)]" (click)="classificaEquipeSemi(3,quartas6)"></span>
+        <br>
+        <label>{{quartas6.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(quartas7)]" (click)="classificaEquipeSemi(4,quartas7)"></span>
+        <br>
+        <label>{{quartas7.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(quartas8)]" (click)="classificaEquipeSemi(4,quartas8)"></span>
+        <br>
+        <label>{{quartas8.sigla}}</label>
+    </div>
+
+    <div class="col-md-1">
+        <span [ngClass]="[carregaFlagBorder(oitavas9)]" (click)="classificaEquipeQuartas(5,oitavas9)"></span>
+        <br>
+        <label>{{oitavas9.sigla}}</label>
+        <br>
+        <span [ngClass]="[carregaFlagBorder(oitavas10)]" (click)="classificaEquipeQuartas(5,oitavas10)"></span>
+        <br>
+        <label>{{oitavas10.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(oitavas11)]" (click)="classificaEquipeQuartas(6,oitavas11)"></span>
+        <br>
+        <label>{{oitavas11.sigla}}</label>
+        <br>
+        <span [ngClass]="[carregaFlagBorder(oitavas12)]" (click)="classificaEquipeQuartas(6,oitavas12)"></span>
+        <br>
+        <label>{{oitavas12.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(oitavas13)]" (click)="classificaEquipeQuartas(7,oitavas13)"></span>
+        <br>
+        <label>{{oitavas13.sigla}}</label>
+        <br>
+        <span [ngClass]="[carregaFlagBorder(oitavas14)]" (click)="classificaEquipeQuartas(7,oitavas14)"></span>
+        <br>
+        <label>{{oitavas14.sigla}}</label>
+        <hr>
+
+        <span [ngClass]="[carregaFlagBorder(oitavas15)]" (click)="classificaEquipeQuartas(8,oitavas15)"></span>
+        <br>
+        <label>{{oitavas15.sigla}}</label>
+        <br>
+        <span [ngClass]="[carregaFlagBorder(oitavas16)]" (click)="classificaEquipeQuartas(8,oitavas16)"></span>
+        <br>
+        <label>{{oitavas16.sigla}}</label>
+        <hr>
+    </div>
+
+
 </div>

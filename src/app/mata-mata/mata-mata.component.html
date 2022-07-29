@@ -2,13 +2,15 @@
     <!-- Chave 1 -->
     <!-- Oitavas de Final-->
     <div class="offset-md-1 col-md-1">
-        <span [ngClass]="[carregaFlagBorder(oitavas1)]" (click)="classificaEquipeQuartas(1,oitavas1)"></span>
-        <br>
-        <label>{{oitavas1.sigla}}</label>
-        <br>
-        <span [ngClass]="[carregaFlagBorder(oitavas2)]" (click)="classificaEquipeQuartas(1,oitavas2)"></span>
-        <br>
-        <label>{{oitavas2.sigla}}</label>
+        <div class="">
+            <span [ngClass]="[carregaFlagBorder(oitavas1)]" (click)="classificaEquipeQuartas(1,oitavas1)"></span>
+            <br>
+            <label>{{oitavas1.sigla}}</label>
+            <br>
+            <span [ngClass]="[carregaFlagBorder(oitavas2)]" (click)="classificaEquipeQuartas(1,oitavas2)"></span>
+            <br>
+            <label>{{oitavas2.sigla}}</label>
+        </div>
         <hr>
 
         <span [ngClass]="[carregaFlagBorder(oitavas3)]" (click)="classificaEquipeQuartas(2,oitavas3)"></span>

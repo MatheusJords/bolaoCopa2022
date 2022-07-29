@@ -185,8 +185,8 @@ export class SelecoesService {
 
   carregaFlagBorder(selecao: Selecoes) {
     if (selecao.flag !== undefined && selecao.flag !== "")
-      return `flag-icon flag-icon-${selecao.flag}`;
-    return `flag-icon flag-icon-${selecao.flag} flag-icon-squared`;
+      return `p-4 flag-icon flag-icon-${selecao.flag}`;
+    return `p-4 flag-icon flag-icon-${selecao.flag} flag-icon-squared`;
   }
 
   preencheGrupo() {

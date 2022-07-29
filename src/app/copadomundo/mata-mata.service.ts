@@ -42,54 +42,93 @@ export class MataMataService {
   disputa3lugar1:Selecoes = new Selecoes();
   disputa3lugar2:Selecoes = new Selecoes();
 
+  campeao:Selecoes = new Selecoes();
+
   constructor() { }
 
-  classificaEquipeQuartas(fase:string, posicao:number,selecao:Selecoes){
+  classificaEquipeQuartas( posicao:number,selecao:Selecoes){
       switch (posicao) {
         case 1:
           this.quartas1 = selecao;
-          console.log(this.quartas1);
           break;
         
         case 2:
           this.quartas2 = selecao;
-          console.log(this.quartas2);
           break;
 
         case 3:
           this.quartas3 = selecao;
-          console.log(this.quartas3);
           break;
 
         case 4:
           this.quartas4 = selecao;
-          console.log(this.quartas4);
           break;
 
         case 5:
           this.quartas5 = selecao;
-          console.log(this.quartas5);
           break;
 
         case 6:
           this.quartas6 = selecao;
-          console.log(this.quartas6);
           break;
         
         case 7:
           this.quartas7 = selecao;
-          console.log(this.quartas7);
           break;
 
         case 8:
           this.quartas8 = selecao;
-          console.log(this.quartas8);
           break;
 
         default:
           break;
-      }
-    
+      }  
+  }
+
+  classificaEquipeSemi(posicao:number,selecao:Selecoes){
+    switch (posicao) {
+      case 1:
+        this.semi1 = selecao;
+        break;
+      
+      case 2:
+        this.semi2 = selecao;
+        break;
+
+      case 3:
+        this.semi3 = selecao;
+        break;
+
+      case 4:
+        this.semi4 = selecao;
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  classificaEquipeFinal(posicao:number,selecao:Selecoes){
+    switch (posicao) {
+      case 1:
+        this.finalista1 = selecao;
+        break;
+      
+      case 2:
+        this.finalista2 = selecao;
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  defineCampeao(selecao:Selecoes){
+    this.campeao = selecao
+  }
+
+  carregaFlagBorderQuartas (selecao: Selecoes) {
+    return `p-4 flag-icon flag-icon-${selecao.flag} flag-icon-squared`;
   }
 
 }

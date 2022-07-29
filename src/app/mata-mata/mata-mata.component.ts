@@ -88,12 +88,47 @@ export class MataMataComponent implements OnInit {
     this.oitavas16 = this.selecoesService.grupoHCopia[0];
   }
 
-  classificaEquipeQuartas(fase:string, chave:number,selecao:Selecoes){
-    console.log("Ok")
-    this.mataMataService.classificaEquipeQuartas(fase, chave,selecao);
+  classificaEquipeQuartas(chave:number,selecao:Selecoes){
+    this.mataMataService.classificaEquipeQuartas( chave,selecao);
+    this.atualizaFinalistas();
+  }
+
+  classificaEquipeSemi(chave:number,selecao:Selecoes){
+    this.mataMataService.classificaEquipeSemi( chave,selecao);
+    this.atualizaFinalistas();
+  }
+
+  defineFinalistas(chave:number,selecao:Selecoes){
+    this.mataMataService.classificaEquipeFinal( chave,selecao);
+    this.atualizaFinalistas();
+  }
+
+  defineCampeao(selecao:Selecoes){
+    this.mataMataService.defineCampeao(selecao);
+    this.atualizaFinalistas();
   }
 
   carregaFlagBorder(selecao:Selecoes){
     return this.selecoesService.carregaFlagBorder(selecao);
+  }
+
+  carregaFlagBorderQuartas(selecao:Selecoes){
+    return this.mataMataService.carregaFlagBorderQuartas(selecao);
+  }
+
+  atualizaFinalistas(){
+    this.quartas1 = this.mataMataService.quartas1;
+    this.quartas2 = this.mataMataService.quartas2;
+    this.quartas3 = this.mataMataService.quartas3;
+    this.quartas4 = this.mataMataService.quartas4;
+    this.quartas5 = this.mataMataService.quartas5;
+    this.quartas6 = this.mataMataService.quartas6;
+    this.quartas7 = this.mataMataService.quartas7;
+    this.quartas8 = this.mataMataService.quartas8;
+
+    this.semi1 = this.mataMataService.semi1;
+    this.semi2 = this.mataMataService.semi2;
+    this.semi3 = this.mataMataService.semi3;
+    this.semi4 = this.mataMataService.semi4;
   }
 }

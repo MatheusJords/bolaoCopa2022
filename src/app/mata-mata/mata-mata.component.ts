@@ -46,6 +46,8 @@ export class MataMataComponent implements OnInit {
   disputa3lugar1:Selecoes = new Selecoes();
   disputa3lugar2:Selecoes = new Selecoes();
 
+  campeao:Selecoes = new Selecoes();
+
   constructor(private selecoesService:SelecoesService,
               private mataMataService:MataMataService) { }
 
@@ -136,5 +138,7 @@ export class MataMataComponent implements OnInit {
 
     this.finalista1 = this.mataMataService.finalista1;
     this.finalista2 = this.mataMataService.finalista2;
+
+    this.campeao = this.mataMataService.campeao;
   }
 }

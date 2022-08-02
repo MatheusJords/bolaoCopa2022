@@ -96,6 +96,15 @@ export class TabelaComponent implements OnInit {
     this.grupoFCopia = this.selecoesService.grupoFCopia;
     this.grupoGCopia = this.selecoesService.grupoGCopia;
     this.grupoHCopia = this.selecoesService.grupoHCopia;
+
+    this.selecoesService.ordena("A");
+    this.selecoesService.ordena("B");
+    this.selecoesService.ordena("C");
+    this.selecoesService.ordena("D");
+    this.selecoesService.ordena("E");
+    this.selecoesService.ordena("F");
+    this.selecoesService.ordena("G");
+    this.selecoesService.ordena("H");
   }
   
   carregaFlag(selecao:Selecoes){

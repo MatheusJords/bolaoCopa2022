@@ -2,6 +2,11 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Selecoes } from '../selecoes/selecoes';
 
+const FASEDEGRUPO : string = "fase-de-grupo";
+const FASEDEGRUPOLABEL : string = "Fase de grupos";
+const MATAMATA : string = "mata-mata";
+const MATAMATALABEL : string = "Playoffs";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,35 +35,22 @@ export class SelecoesService {
   faseAtual?: string;
   faseAtualTitulo ?: string;
 
+
   constructor(private router: Router) { }
 
   atualizaFaseAtualTitulo():void{
-    if (this.faseAtual?.includes("fase-de-grupo")) {
-      this.faseAtualTitulo = "Fase de grupos";
-      return
-    }
-    /*
-    if (this.faseAtual?.includes("oitavas-de-final")) {
-      this.faseAtualTitulo = "Oitavas-de-final";
-      return
-    }
-    
-    if (this.faseAtual?.includes("quartas-de-final")) {
-      this.faseAtualTitulo = "Quartas-de-final"
-      return
-    }
+    switch (this.faseAtual) {
+      case FASEDEGRUPO:
+        this.faseAtualTitulo = FASEDEGRUPOLABEL;
+        break;
+      
+      case MATAMATA:
+        this.faseAtualTitulo = MATAMATALABEL;
+        break;
 
-    if (this.faseAtual?.includes("semi-final")) {
-      this.faseAtualTitulo = "Semi-final"
-      return
+      default:
+        break;
     }
-
-    if (this.faseAtual?.includes("final")) {
-      this.faseAtualTitulo = "Final"
-      return
-    }
-    */
-
   }
 
   faseAnterior() {
@@ -67,24 +59,6 @@ export class SelecoesService {
       this.atualizaFaseAtualTitulo();
       return
     }
-    /*
-    if (this.faseAtual?.includes("quartas-de-final")) {
-      this.router.navigate(['/oitavas'])
-      this.atualizaFaseAtualTitulo();
-      return
-    }
-    if (this.faseAtual?.includes("semi-final")) {
-      this.router.navigate(['/quartas'])
-      this.atualizaFaseAtualTitulo();
-      return
-    }
-
-    if (this.faseAtual?.includes("final")) {
-      this.router.navigate(['/semi'])
-      this.atualizaFaseAtualTitulo();
-      return
-    }
-    */
   }
 
   proximaFase() {
@@ -92,20 +66,6 @@ export class SelecoesService {
       this.router.navigate(['/mata-mata'])
       return
     }
-    /*
-    if (this.faseAtual?.includes("oitavas-de-final")) {
-      this.router.navigate(['/quartas'])
-      return
-    }
-    if (this.faseAtual?.includes("quartas-de-final")) {
-      this.router.navigate(['/semi'])
-      return
-    }
-    if (this.faseAtual?.includes("semi-final")) {
-      this.router.navigate(['/final'])
-      return
-    }
-    */
   }
 
   criaSelecoesDaCopa() {
@@ -397,6 +357,39 @@ export class SelecoesService {
       this.grupoHCopia = JSON.parse(JSON.stringify(this.grupoH))
       this.ordenaPorGrupo(this.grupoHCopia)
     }
+  }
+
+  limpaTabela(){
+    this.grupoA = [];
+    this.grupoB = [];
+    this.grupoC = [];
+    this.grupoD = [];
+    this.grupoE = [];
+    this.grupoF = [];
+    this.grupoG = [];
+    this.grupoH = [];
+
+    this.grupoACopia = [];
+    this.grupoBCopia = [];
+    this.grupoCCopia = [];
+    this.grupoDCopia = [];
+    this.grupoECopia = [];
+    this.grupoFCopia = [];
+    this.grupoGCopia = [];
+    this.grupoHCopia = [];
+
+    this.selecoes = [];
+  }
+
+  atualizaOrdenacao(){
+    this.ordena("A");
+    this.ordena("B");
+    this.ordena("C");
+    this.ordena("D");
+    this.ordena("E");
+    this.ordena("F");
+    this.ordena("G");
+    this.ordena("H");
   }
 
   ordenaPorGrupo(grupo: Array<Selecoes>) {

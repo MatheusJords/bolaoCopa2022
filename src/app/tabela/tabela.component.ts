@@ -88,6 +88,7 @@ export class TabelaComponent implements OnInit {
 
   atualizaValores(){
     //console.log(this.grupoACopia)
+
     this.grupoACopia = this.selecoesService.grupoACopia;
     this.grupoBCopia = this.selecoesService.grupoBCopia;
     this.grupoCCopia = this.selecoesService.grupoCCopia;
@@ -97,14 +98,7 @@ export class TabelaComponent implements OnInit {
     this.grupoGCopia = this.selecoesService.grupoGCopia;
     this.grupoHCopia = this.selecoesService.grupoHCopia;
 
-    this.selecoesService.ordena("A");
-    this.selecoesService.ordena("B");
-    this.selecoesService.ordena("C");
-    this.selecoesService.ordena("D");
-    this.selecoesService.ordena("E");
-    this.selecoesService.ordena("F");
-    this.selecoesService.ordena("G");
-    this.selecoesService.ordena("H");
+    this.selecoesService.atualizaOrdenacao();
   }
   
   carregaFlag(selecao:Selecoes){
@@ -121,5 +115,21 @@ export class TabelaComponent implements OnInit {
 
   retornaSelecoes(grupo: String):Array<Selecoes> {
     return this.selecoesService.retornaSelecoes(grupo);
+  }
+
+  limpaSelecoes(){
+    this.selecoesService.limpaTabela();
+    
+    this.grupos = this.gruposService.criaGrupos();
+    this.selecoesService.criaSelecoesDaCopa();
+
+    this.grupoA = this.selecoesService.grupoA;
+    this.grupoB = this.selecoesService.grupoB;
+    this.grupoC = this.selecoesService.grupoC;
+    this.grupoD = this.selecoesService.grupoD;
+    this.grupoE = this.selecoesService.grupoE;
+    this.grupoF = this.selecoesService.grupoF;
+    this.grupoG = this.selecoesService.grupoG;
+    this.grupoH = this.selecoesService.grupoH;
   }
 }

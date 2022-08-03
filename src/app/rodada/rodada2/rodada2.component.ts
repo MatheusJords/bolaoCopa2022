@@ -28,17 +28,11 @@ export class Rodada2Component implements OnInit {
     this.rodada1 = this.rodadaService.rodada1;
     this.rodada2 = this.rodadaService.rodada2;
     this.rodada3 = this.rodadaService.rodada3;
-    this.grupoA = this.selecoesService.grupoA;
-    this.grupoB = this.selecoesService.grupoB;
-    this.grupoC = this.selecoesService.grupoC;
-    this.grupoD = this.selecoesService.grupoD;
-    this.grupoE = this.selecoesService.grupoE;
-    this.grupoF = this.selecoesService.grupoF;
-    this.grupoG = this.selecoesService.grupoG;
-    this.grupoH = this.selecoesService.grupoH;
+    this.carregaRodadas();
   }
 
   ngOnInit(): void {
+    setInterval (() => this.carregaRodadas(),500)
   }
 
   carregaFlag(selecao:Selecoes){
@@ -60,6 +54,17 @@ export class Rodada2Component implements OnInit {
     }
 
     this.selecoesService.ordena(grupo);
+  }
+
+  carregaRodadas(){
+    this.grupoA = this.selecoesService.grupoA;
+    this.grupoB = this.selecoesService.grupoB;
+    this.grupoC = this.selecoesService.grupoC;
+    this.grupoD = this.selecoesService.grupoD;
+    this.grupoE = this.selecoesService.grupoE;
+    this.grupoF = this.selecoesService.grupoF;
+    this.grupoG = this.selecoesService.grupoG;
+    this.grupoH = this.selecoesService.grupoH;
   }
 
 }

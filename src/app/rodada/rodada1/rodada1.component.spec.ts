@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 import { Rodada1Component } from './rodada1.component';
 
@@ -8,7 +9,8 @@ describe('Rodada1Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Rodada1Component ]
+      declarations: [ Rodada1Component ],
+      providers: [ { provide: Router, useClass: class { navigate = jasmine.createSpy("navigate"); } }]
     })
     .compileComponents();
   });
@@ -16,7 +18,7 @@ describe('Rodada1Component', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(Rodada1Component);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    //fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 import { MataMataComponent } from './mata-mata.component';
 
@@ -8,7 +9,8 @@ describe('MataMataComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MataMataComponent ]
+      declarations: [ MataMataComponent ],
+      providers: [ { provide: Router, useClass: class { navigate = jasmine.createSpy("navigate"); } }]
     })
     .compileComponents();
   });
@@ -16,7 +18,7 @@ describe('MataMataComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MataMataComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    //fixture.detectChanges();
   });
 
   it('should create', () => {

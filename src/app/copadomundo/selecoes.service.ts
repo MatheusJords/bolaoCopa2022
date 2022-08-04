@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Selecoes } from '../selecoes/selecoes';
+import { Constants } from './constants';
 
 const FASEDEGRUPO : string = "fase-de-grupo";
 const FASEDEGRUPOLABEL : string = "Fase de grupos";
@@ -36,7 +37,7 @@ export class SelecoesService {
   faseAtualTitulo ?: string;
 
 
-  constructor(private router: Router) { }
+  constructor(private router ?: Router) { }
 
   atualizaFaseAtualTitulo():void{
     switch (this.faseAtual) {
@@ -55,7 +56,7 @@ export class SelecoesService {
 
   faseAnterior() {
     if (this.faseAtual?.includes("mata-mata")) {
-      this.router.navigate(['/'])
+      this.router?.navigate(['/'])
       this.atualizaFaseAtualTitulo();
       return
     }
@@ -63,7 +64,7 @@ export class SelecoesService {
 
   proximaFase() {
     if (this.faseAtual?.includes("fase-de-grupo")) {
-      this.router.navigate(['/mata-mata'])
+      this.router?.navigate(['/mata-mata'])
       return
     }
   }
@@ -71,54 +72,54 @@ export class SelecoesService {
   criaSelecoesDaCopa() {
     //Grupo A
     if (this.grupoA.length === 0) {
-      this.criaSelecao("Catar", "A", 1, "qa","CAT");
-      this.criaSelecao("Equador", "A", 2, "ec","EQU");
-      this.criaSelecao("Senegal", "A", 3, "sn","SEN");
-      this.criaSelecao("Holanda", "A", 4, "nl","HOL");
+      this.criaSelecao(Constants.Catar, "A", 1, "qa","CAT");
+      this.criaSelecao(Constants.Equador, "A", 2, "ec","EQU");
+      this.criaSelecao(Constants.Senegal, "A", 3, "sn","SEN");
+      this.criaSelecao(Constants.Holanda, "A", 4, "nl","HOL");
     }
 
     if (this.grupoB.length === 0) {
-      this.criaSelecao("Inglaterra", "B", 1, "gb","ING");
-      this.criaSelecao("Irã", "B", 2, "ir","IRÃ");
-      this.criaSelecao("EUA", "B", 3, "us","EUA");
-      this.criaSelecao("Gales", "B", 4, "gb-wls","GAL");
+      this.criaSelecao(Constants.Inglaterra, "B", 1, "gb","ING");
+      this.criaSelecao(Constants.Ira, "B", 2, "ir","IRÃ");
+      this.criaSelecao(Constants.EUA, "B", 3, "us","EUA");
+      this.criaSelecao(Constants.Gales, "B", 4, "gb-wls","GAL");
     }
     if (this.grupoC.length === 0) {
-      this.criaSelecao("Argentina", "C", 1, "ar","ARG");
-      this.criaSelecao("Arábia Saudita", "C", 2, "sa","ARA");
-      this.criaSelecao("México", "C", 3, "mx","MEX");
-      this.criaSelecao("Polônia", "C", 4, "pl","POL");
+      this.criaSelecao(Constants.Argentina, "C", 1, "ar","ARG");
+      this.criaSelecao(Constants.Arabia_Saudita, "C", 2, "sa","ARA");
+      this.criaSelecao(Constants.Mexico, "C", 3, "mx","MEX");
+      this.criaSelecao(Constants.Polonia, "C", 4, "pl","POL");
     }
     if (this.grupoD.length === 0) {
-      this.criaSelecao("França", "D", 1, "fr","FRA");
-      this.criaSelecao("Austrália", "D", 2, "au","AUS");
-      this.criaSelecao("Dinamarca", "D", 3, "dk","DIN");
-      this.criaSelecao("Tunísia", "D", 4, "tn","TUN");
+      this.criaSelecao(Constants.Franca, "D", 1, "fr","FRA");
+      this.criaSelecao(Constants.Australia, "D", 2, "au","AUS");
+      this.criaSelecao(Constants.Dinamarca, "D", 3, "dk","DIN");
+      this.criaSelecao(Constants.Tunisia, "D", 4, "tn","TUN");
     }
     if (this.grupoE.length === 0) {
-      this.criaSelecao("Espanha", "E", 1, "es","ESP");
-      this.criaSelecao("Costa Rica", "E", 2, "cr","CRC");
-      this.criaSelecao("Alemanha", "E", 3, "de","ALE");
-      this.criaSelecao("Japão", "E", 4, "jp","JAP");
+      this.criaSelecao(Constants.Espanha, "E", 1, "es","ESP");
+      this.criaSelecao(Constants.Costa_Rica, "E", 2, "cr","CRC");
+      this.criaSelecao(Constants.Alemanha, "E", 3, "de","ALE");
+      this.criaSelecao(Constants.Japao, "E", 4, "jp","JAP");
     }
     if (this.grupoF.length === 0) {
-      this.criaSelecao("Bélgica", "F", 1, "be","BEL");
-      this.criaSelecao("Canadá", "F", 2, "ca","CAN");
-      this.criaSelecao("Marrocos", "F", 3, "ma","MAR");
-      this.criaSelecao("Croácia", "F", 4, "hr","CRO");
+      this.criaSelecao(Constants.Belgica, "F", 1, "be","BEL");
+      this.criaSelecao(Constants.Canada, "F", 2, "ca","CAN");
+      this.criaSelecao(Constants.Marrocos, "F", 3, "ma","MAR");
+      this.criaSelecao(Constants.Croacia, "F", 4, "hr","CRO");
     }
     if (this.grupoG.length === 0) {
-      this.criaSelecao("Brasil", "G", 1, "br","BRA");
-      this.criaSelecao("Sérvia", "G", 2, "rs","SER");
-      this.criaSelecao("Suíça", "G", 3, "ch","SUI");
-      this.criaSelecao("Camarões", "G", 4, "cm","CMR");
+      this.criaSelecao(Constants.Brasil, "G", 1, "br","BRA");
+      this.criaSelecao(Constants.Servia, "G", 2, "rs","SER");
+      this.criaSelecao(Constants.Suica, "G", 3, "ch","SUI");
+      this.criaSelecao(Constants.Camaroes, "G", 4, "cm","CMR");
     }
 
     if (this.grupoH.length === 0) {
-      this.criaSelecao("Portugal", "H", 1, "pt","POR");
-      this.criaSelecao("Gana", "H", 2, "gh","GAN");
-      this.criaSelecao("Uruguai", "H", 3, "uy","URU");
-      this.criaSelecao("Coreia do Sul", "H", 4, "kr","COR");
+      this.criaSelecao(Constants.Portugal, "H", 1, "pt","POR");
+      this.criaSelecao(Constants.Gana, "H", 2, "gh","GAN");
+      this.criaSelecao(Constants.Uruguai, "H", 3, "uy","URU");
+      this.criaSelecao(Constants.Coreia_do_Sul, "H", 4, "kr","COR");
     }
 
     if (this.grupoA.length === 0)
@@ -140,7 +141,7 @@ export class SelecoesService {
   carregaFlag(selecao: Selecoes) {
     if (selecao.flag !== undefined && selecao.flag !== "")
       return `flag-icon flag-icon-${selecao.flag}`;
-    return `flag-icon flag-icon-${selecao.flag}`;
+    else return ``;
   }
 
   carregaFlagBorder(selecao: Selecoes) {

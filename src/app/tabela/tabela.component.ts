@@ -30,7 +30,7 @@ export class TabelaComponent implements OnInit {
   grupoFCopia: Array<Selecoes> = [];
   grupoGCopia: Array<Selecoes> = [];
   grupoHCopia: Array<Selecoes> = [];
-  faseAtualTitulo ?: string;
+  faseAtualTitulo ?: string = "Fase de grupos";
 
 
   constructor(

@@ -35,8 +35,9 @@ export class Rodada3Component implements OnInit {
     setInterval (() => this.carregaRodadas(),500)
   }
 
-  carregaFlag(selecao:Selecoes){
-    return this.selecoesService.carregaFlag(selecao);
+  carregaFlag(selecao:Selecoes):any{
+    if(selecao) return this.selecoesService.carregaFlag(selecao);
+    else return "";
   }
 
   mudaResultadoR3(mandante: Selecoes, visitante: Selecoes, rodada: number,grupo : string) {
